@@ -6,11 +6,19 @@ using UnityEngine.UI;
 
 public class MergeObjects : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private Image Image;
+    [HideInInspector] public Image Image;
+    [HideInInspector] public Outline Outline;
     private bool _isOn = false;
+    enum Types
+    {
+
+    }
+
     void Start()
     {
         Image = GetComponent<Image>();
+        Outline = GetComponent<Outline>();
+        Outline.enabled = false;
     }
 
     // Update is called once per frame
@@ -20,15 +28,22 @@ public class MergeObjects : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             if (Input.GetMouseButtonDown(1) && Image.sprite != null)
             {
-                if (Inventory.Instance.NumberToMerge <= 3)
+                if (Outline.enabled)
                 {
-                    Inventory.Instance.ItemToMerge.Add(Image);
-                    Inventory.Instance.NumberToMerge++;
+                    Outline.enabled = false;
+                    Inventory.Instance.ItemToMerge.Remove(this); 
+                    Inventory.Instance.NumberToMerge--;
                 }
-                else
+                else if (Inventory.Instance.NumberToMerge < 3)
+                {
+                    Inventory.Instance.ItemToMerge.Add(this);
+                    Inventory.Instance.NumberToMerge++;
+                    Outline.enabled = true;
+                }
+                else if (Inventory.Instance.NumberToMerge >= 3)
                 {
                     Inventory.Instance.ItemToMerge.RemoveAt(0);
-                    Inventory.Instance.ItemToMerge.Add(Image);
+                    Inventory.Instance.ItemToMerge.Add(this);
                 }
 
             }

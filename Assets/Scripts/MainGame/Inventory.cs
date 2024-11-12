@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance;
 
     public List<Image> InventoryBoxs;
-    public List<Image> ItemToMerge;
+    public List<MergeObjects> ItemToMerge;
 
     public int NumberToMerge;
 
@@ -50,9 +51,10 @@ public class Inventory : MonoBehaviour
 
     public void OnClickTryMerge()
     {
-        foreach (var item in Inventory.Instance.ItemToMerge)
+        foreach (var item in ItemToMerge)
         {
-            item.sprite = null;
+            item.Image = null;
+            item.Outline.enabled = false;
         }
         NumberToMerge = 0;
     }
