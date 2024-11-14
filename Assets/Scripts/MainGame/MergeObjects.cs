@@ -4,21 +4,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MergeObjects : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHandler
 {
     [HideInInspector] public Image Image;
     [HideInInspector] public Outline Outline;
+    [HideInInspector] public bool IsOccupied;
     private bool _isOn = false;
-    enum Types
-    {
-
-    }
+    
 
     void Start()
     {
         Image = GetComponent<Image>();
         Outline = GetComponent<Outline>();
         Outline.enabled = false;
+        IsOccupied = false;
     }
 
     // Update is called once per frame

@@ -9,10 +9,11 @@ public class Inventory : MonoBehaviour
 
     public static Inventory Instance;
 
-    public List<Image> InventoryBoxs;
+    public List<MergeObjects> InventoryBoxs;
     public List<MergeObjects> ItemToMerge;
 
     public int NumberToMerge;
+    public int ItemInInventory;
 
     public Button MergeButton;
 
@@ -55,7 +56,10 @@ public class Inventory : MonoBehaviour
         {
             item.Image = null;
             item.Outline.enabled = false;
+            item.IsOccupied = false;
+            ItemInInventory--;
         }
         NumberToMerge = 0;
+        ItemToMerge.Clear();
     }
 }
