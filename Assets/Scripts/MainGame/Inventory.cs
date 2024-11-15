@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +34,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -52,14 +53,26 @@ public class Inventory : MonoBehaviour
 
     public void OnClickTryMerge()
     {
-        foreach (var item in ItemToMerge)
+        string toCheck = ItemToMerge[0].type.ToString();
+        for (int i = 1; i < ItemToMerge.Count; i++)
         {
-            item.Image.sprite = null;
-            item.Outline.enabled = false;
-            item.IsOccupied = false;
-            ItemInInventory--;
+            if (toCheck != ItemToMerge[i].type.ToString())
+            {
+                Debug.Log("You can't merge, sorry.");
+                break;
+            }
+            if (i == ItemToMerge.Count-1)
+            {
+                foreach (var item in ItemToMerge)
+                {
+                    item.Image.sprite = null;
+                    item.Outline.enabled = false;
+                    item.IsOccupied = false;
+                    ItemInInventory--;
+                }
+                NumberToMerge = 0;
+                ItemToMerge.Clear();
+            }
         }
-        NumberToMerge = 0;
-        ItemToMerge.Clear();
     }
 }
