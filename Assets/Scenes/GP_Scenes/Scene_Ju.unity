@@ -2717,18 +2717,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryBoxs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753525015}
+  - {fileID: 346691374}
+  - {fileID: 1593483601}
+  - {fileID: 1829584602}
+  - {fileID: 1530199252}
+  - {fileID: 2087116707}
+  - {fileID: 712189696}
+  - {fileID: 1161721386}
+  - {fileID: 1262328078}
+  - {fileID: 196849430}
+  - {fileID: 2100445707}
+  - {fileID: 156298148}
   ItemToMerge: []
   NumberToMerge: 0
   ItemInInventory: 0

@@ -41,8 +41,10 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
                 }
                 else if (Inventory.Instance.NumberToMerge >= 3)
                 {
+                    Inventory.Instance.ItemToMerge[0].Outline.enabled = false;
                     Inventory.Instance.ItemToMerge.RemoveAt(0);
                     Inventory.Instance.ItemToMerge.Add(this);
+                    Outline.enabled = true;
                 }
 
             }

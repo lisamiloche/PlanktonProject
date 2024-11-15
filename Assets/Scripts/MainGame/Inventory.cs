@@ -54,7 +54,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (var item in ItemToMerge)
         {
-            item.Image = null;
+            item.Image.sprite = null;
             item.Outline.enabled = false;
             item.IsOccupied = false;
             ItemInInventory--;

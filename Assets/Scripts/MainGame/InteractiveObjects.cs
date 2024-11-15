@@ -38,7 +38,7 @@ public class InteractiveObjects : TypesManager
         yield return new WaitForSeconds(2f);
         foreach (var item in Inventory.Instance.InventoryBoxs)
         {
-            if (!item.IsOccupied)
+           if (!item.IsOccupied)
             {
                 Inventory.Instance.ItemInInventory++;
                 item.type = type;
@@ -49,5 +49,4 @@ public class InteractiveObjects : TypesManager
         }
         Destroy(gameObject);
     }
-
 }
