@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InteractiveObjects : TypesManager, IPointerEnterHandler, IPointerExitHandler
+public class InteractiveObjects : TypesManager
 {
     public Sprite Image;
     public Renderer OrderRenderer;
@@ -15,7 +15,7 @@ public class InteractiveObjects : TypesManager, IPointerEnterHandler, IPointerEx
     {
         OrderRenderer = GetComponent<Renderer>();
 
-        if (OrderRenderer.sortingOrder < 0)
+        if (OrderRenderer.sortingOrder == 0)
         {
             _isHiden = true;
         }
@@ -32,14 +32,17 @@ public class InteractiveObjects : TypesManager, IPointerEnterHandler, IPointerEx
     {
         if (!_isHiden)
         {
-            if (Inventory.Instance.ItemInInventory < Inventory.Instance.InventoryBoxs.Count)
+            if (!GameManager.Instance.MGlass.gameObject.activeSelf)
             {
-                transform.position = Vector3.zero;
-                transform.localScale = new Vector2(0.5f, 0.5f);
-                StartCoroutine(WaitToGoInventory());
+                if (Inventory.Instance.ItemInInventory < Inventory.Instance.InventoryBoxs.Count)
+                {
+                    transform.position = Vector3.zero;
+                    transform.localScale = new Vector2(0.5f, 0.5f);
+                    StartCoroutine(WaitToGoInventory());
+                }
+                else
+                    Debug.Log("Can't take it.");
             }
-            else
-                Debug.Log("Can't take it.");
         }
     }
 
@@ -60,16 +63,4 @@ public class InteractiveObjects : TypesManager, IPointerEnterHandler, IPointerEx
         Destroy(gameObject);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("HEEEEEEEEEEEEEEEEEEE");
-        MagnifyingGlass.Instance.CanShrink = true;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        Debug.Log("HAAAAAAAAAAAAAAAAAAAAA");
-        MagnifyingGlass.Instance.CanShrink = false;
-    }
-   
 }
