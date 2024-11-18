@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class MagnifyingGlass : MonoBehaviour
 {
     public static MagnifyingGlass Instance;
 
-    public Mask Mask;
+    public SpriteMask Mask;
 
-    public bool IsOnObject;
+    public LayerMask LayerMask;
+
     [HideInInspector] public bool CanShrink;
 
-    InteractiveObjects _hidenObject;
+    GameObject _hidenObject;
+    Sequence sequence;
+    Guid uid;
+
+    Vector3 Scale;
 
 
     private void Awake()
@@ -29,9 +35,15 @@ public class MagnifyingGlass : MonoBehaviour
         }
     }
 
+    Coroutine coco;
+
+
     void Start()
     {
+        Scale = Mask.transform.localScale;
         CanShrink = false;
+
+        
     }
 
     // Update is called once per frame
@@ -43,31 +55,53 @@ public class MagnifyingGlass : MonoBehaviour
 
         if (CanShrink)
         {
-            StartCoroutine(Shrinking());
-
+            PlayScale();
         }
 
-    }
-
-
-    IEnumerator Shrinking()
-    {
-        Mask.transform.DOScale(0.5f, 3);
-        yield return new WaitForSeconds(3f);
-        _hidenObject.OrderRenderer.sortingOrder = 1;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        foreach (InteractiveObjects obj in GameManager.Instance.HidenObjects)
+        if (!CanShrink)
         {
-            if (collision.gameObject == obj)
-            {
-
-                CanShrink = true;
-                _hidenObject = obj;
-            }
+            KillScale();
 
         }
+        //StopCoroutine(coco);
+
+        LayerMask layerMask = LayerMask;
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Hillo");
+            CanShrink = true;
+            _hidenObject = hit.collider.gameObject;
+        }
+
+        if (hit.collider == null)
+        {
+            CanShrink = false;
+            _hidenObject = null;
+            
+        }
+
     }
+
+
+    void PlayScale()
+    {
+        if (sequence == null)
+        {
+            sequence = DOTween.Sequence();
+            sequence.Append(Mask.transform.DOScale(0.5f, 3));
+            uid = System.Guid.NewGuid();
+            sequence.id = uid;
+        }
+        sequence.Play();
+    }
+
+    void KillScale()
+    {
+        DOTween.Kill(uid);
+        sequence = null;
+        Mask.transform.DOScale(Scale,0.5f);
+    }
+
 }

@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 200230827}
   - component: {fileID: 200230826}
   - component: {fileID: 200230825}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,8 +1143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bc6a2140e2f2043819398e451e800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mask: {fileID: 0}
-  IsOnObject: 0
+  Mask: {fileID: 1581257828}
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   CanShrink: 0
 --- !u!212 &691745188
 SpriteRenderer:
@@ -3839,7 +3841,7 @@ GameObject:
   - component: {fileID: 1962817127}
   - component: {fileID: 1962817126}
   - component: {fileID: 1962817125}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4423,7 +4425,7 @@ GameObject:
   - component: {fileID: 2046722846}
   - component: {fileID: 2046722845}
   - component: {fileID: 2046722844}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Square (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
