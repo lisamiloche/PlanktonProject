@@ -16,28 +16,36 @@ public class Dialog : MonoBehaviour
     [Header("Autres variables")]
     private int _sequenceNumber = 0;
     [HideInInspector] public bool InProgress = true;
+    public bool _boxIsActive = false;
 
-    // Voir pourquoi erreur au démarrage des dialogues
-    // Faire en sorte que le texte s'écrive au fur et à mesure
+    // Faire en sorte que le texte s'écrive au fur et à mesure aussi pour le premier dialogue.
 
     private void Start()
     {
-        UpdateDialog(Dialogs[_sequenceNumber]);
+        if (Dialogs.Length > 0)
+            StartCoroutine(UpdateDialog(Dialogs[_sequenceNumber]));
     }
 
-    void UpdateDialog(DialogSequence dialog)
+    private IEnumerator UpdateDialog(DialogSequence dialog)
     {
-        TextDialog.text = dialog.TextDialog;
         TextNameCharacter.text = dialog.TextNameCharacter;
         TextButton.text = dialog.TextButton;
+
+        TextDialog.text = "";
+
+        for (int i = 0; i < dialog.TextDialog.Length; i++)
+        {
+            TextDialog.text += dialog.TextDialog[i];
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 
-    public void OnClickNextDialog() 
+    public void OnClickNextDialog()
     {
         _sequenceNumber++;
         if (_sequenceNumber <= Dialogs.Length-1)
         {
-            UpdateDialog(Dialogs[_sequenceNumber]);
+            StartCoroutine(UpdateDialog(Dialogs[_sequenceNumber]));
         }
         else
         {

@@ -10,6 +10,7 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
     [HideInInspector] public Outline Outline;
     [HideInInspector] public bool IsOccupied;
     private bool _isOn = false;
+    [HideInInspector] public bool _drag = false; //Ajout Lisa
     
 
     void Start()
@@ -47,6 +48,11 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
                     Outline.enabled = true;
                 }
 
+            }
+
+            if (Input.GetMouseButton(0) && Image.sprite != null) // AJOUT LISA
+            {
+                _drag = true;
             }
         }
     }

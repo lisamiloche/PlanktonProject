@@ -245,12 +245,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36109738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.84, y: 1.5045, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.744453, y: 1.8120008, z: -1.9243978}
   m_LocalScale: {x: 3.0433683, y: 18.915386, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 931027267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195242379
 GameObject:
@@ -296,9 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: TEST02
+  TextDialog: "Hum le caca c'est d\xE9licieux.... TROP TROP DELICIEUX"
   TextNameCharacter: TEST02
-  TextButton: TEST02
+  TextButton: END
 --- !u!1 &314716455
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,12 +422,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314716455}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.9601, y: 1.5045, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.055649, y: 1.8120008, z: -1.9243978}
   m_LocalScale: {x: 3.0433683, y: 18.915386, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 931027267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330340350
 GameObject:
@@ -769,6 +769,7 @@ MonoBehaviour:
   - {fileID: 1068699387}
   - {fileID: 195242381}
   InProgress: 1
+  _boxIsActive: 0
 --- !u!4 &794453814
 Transform:
   m_ObjectHideFlags: 0
@@ -914,6 +915,40 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &931027266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931027267}
+  m_Layer: 0
+  m_Name: __SpaceColliders__
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &931027267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931027266}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9044523, y: -0.3075007, z: 1.9243978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1531050194}
+  - {fileID: 314716458}
+  - {fileID: 36109741}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941097349
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +1028,7 @@ GameObject:
   - component: {fileID: 977197157}
   - component: {fileID: 977197158}
   m_Layer: 0
-  m_Name: POSTPROCESS
+  m_Name: POSTPROCESS_BLUR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,9 +1398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: TEST
+  TextDialog: "Hum le caca c'est d\xE9licieux"
   TextNameCharacter: TEST
-  TextButton: TEST
+  TextButton: NEXT
 --- !u!1 &1138063955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,37 +1538,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1 &1267650043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1267650044}
-  m_Layer: 0
-  m_Name: col
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1267650044
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267650043}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9044523, y: -0.3075007, z: 1.9243978}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499440604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,12 +1794,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531050191}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9094, y: -4.1707, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.8138523, y: -3.8631995, z: -1.9243978}
   m_LocalScale: {x: 36.82816, y: 7.564944, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 931027267}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588799040
 GameObject:
@@ -2118,6 +2122,7 @@ MonoBehaviour:
   TextButton: {fileID: 0}
   Dialogs: []
   InProgress: 1
+  _boxIsActive: 0
 --- !u!1 &1809627172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,13 +2696,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 1138063958}
   - {fileID: 1964980395}
-  - {fileID: 977197157}
   - {fileID: 1066360593}
   - {fileID: 1965426399}
   - {fileID: 1499440607}
-  - {fileID: 1531050194}
-  - {fileID: 314716458}
-  - {fileID: 36109741}
+  - {fileID: 931027267}
   - {fileID: 1685570423}
   - {fileID: 794453814}
-  - {fileID: 1267650044}
+  - {fileID: 977197157}
