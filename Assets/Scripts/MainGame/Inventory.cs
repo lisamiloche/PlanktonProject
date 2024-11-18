@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
 
     public List<MergeObjects> InventoryBoxs;
     public List<MergeObjects> ItemToMerge;
+    public ListImageMerge[] MergeSprites;
 
     public int NumberToMerge;
     public int ItemInInventory;
@@ -71,6 +72,7 @@ public class Inventory : MonoBehaviour
                     ItemInInventory--;
                 }
                 NumberToMerge = 0;
+                //ItemToMerge[0].Image.sprite = ;
                 ItemToMerge.Clear();
             }
         }

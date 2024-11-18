@@ -3044,6 +3044,9 @@ MonoBehaviour:
   - {fileID: 2100445707}
   - {fileID: 156298148}
   ItemToMerge: []
+  MergeSprites:
+  - Type: {fileID: 0}
+    Sprite: {fileID: 0}
   NumberToMerge: 0
   ItemInInventory: 0
   MergeButton: {fileID: 191987929}
