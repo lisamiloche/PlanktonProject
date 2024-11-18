@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHandler
+public class MergeObjects : TypesManager
 {
     [HideInInspector] public Image Image;
     [HideInInspector] public Outline Outline;
