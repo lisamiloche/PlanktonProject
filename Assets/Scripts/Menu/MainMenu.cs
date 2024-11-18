@@ -13,8 +13,9 @@ public class MainMenu : MonoBehaviour
     public GameObject Settings;
     public GameObject Credits;
 
-    private void Awake()
+    private void Start()
     {
+        Time.timeScale = 1f;
         StartCoroutine(FadingStart());
     }
 
