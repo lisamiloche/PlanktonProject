@@ -15,7 +15,7 @@ public class MagnifyingGlass : MonoBehaviour
 
     [HideInInspector] public bool CanShrink;
 
-    GameObject _hidenObject;
+    InteractiveObjects _hidenObject;
     Sequence sequence;
     Guid uid;
 
@@ -42,8 +42,7 @@ public class MagnifyingGlass : MonoBehaviour
     {
         Scale = Mask.transform.localScale;
         CanShrink = false;
-
-        
+        coco = StartCoroutine(WaitToGoInventory());
     }
 
     // Update is called once per frame
@@ -63,16 +62,15 @@ public class MagnifyingGlass : MonoBehaviour
             KillScale();
 
         }
-        //StopCoroutine(coco);
 
         LayerMask layerMask = LayerMask;
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
 
-        if (hit.collider != null)
+        if (hit.collider != null && (hit.collider.gameObject.GetComponent("InteractiveObjects") as InteractiveObjects) !=null)
         {
             Debug.Log("Hillo");
             CanShrink = true;
-            _hidenObject = hit.collider.gameObject;
+            _hidenObject = hit.collider.gameObject.GetComponent("InteractiveObjects") as InteractiveObjects;
         }
 
         if (hit.collider == null)
@@ -95,6 +93,7 @@ public class MagnifyingGlass : MonoBehaviour
             sequence.id = uid;
         }
         sequence.Play();
+        StartCoroutine(WaitToGoInventory());
     }
 
     void KillScale()
@@ -102,6 +101,25 @@ public class MagnifyingGlass : MonoBehaviour
         DOTween.Kill(uid);
         sequence = null;
         Mask.transform.DOScale(Scale,0.5f);
+        StopCoroutine(coco);
+    }
+
+
+    IEnumerator WaitToGoInventory()
+    {
+        yield return new WaitForSeconds(3f); 
+        foreach (var item in Inventory.Instance.InventoryBoxs)
+        {
+            if (!item.IsOccupied)
+            {
+                Inventory.Instance.ItemInInventory++;
+                item.type = _hidenObject.type;
+                item.Image.sprite = _hidenObject.Image;
+                item.IsOccupied = true;
+                break;
+            }
+        }
+        Destroy(_hidenObject.gameObject);
     }
 
 }
