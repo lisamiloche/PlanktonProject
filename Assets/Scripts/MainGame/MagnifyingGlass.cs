@@ -20,6 +20,7 @@ public class MagnifyingGlass : MonoBehaviour
     Guid uid;
 
     Vector3 Scale;
+    int _timeSinceStarted = 0;
 
 
     private void Awake()
@@ -55,6 +56,7 @@ public class MagnifyingGlass : MonoBehaviour
         if (CanShrink)
         {
             PlayScale();
+            _timeSinceStarted++;
         }
 
         if (!CanShrink)
@@ -93,11 +95,13 @@ public class MagnifyingGlass : MonoBehaviour
             sequence.id = uid;
         }
         sequence.Play();
-        StartCoroutine(WaitToGoInventory());
+        if (_timeSinceStarted == 1)
+            StartCoroutine(WaitToGoInventory());
     }
 
     void KillScale()
     {
+        _timeSinceStarted = 0;
         DOTween.Kill(uid);
         sequence = null;
         Mask.transform.DOScale(Scale,0.5f);
@@ -107,12 +111,14 @@ public class MagnifyingGlass : MonoBehaviour
 
     IEnumerator WaitToGoInventory()
     {
+         
         yield return new WaitForSeconds(3f); 
         foreach (var item in Inventory.Instance.InventoryBoxs)
         {
             if (!item.IsOccupied)
             {
                 Inventory.Instance.ItemInInventory++;
+                Debug.Log(item.type.ToString());
                 item.type = _hidenObject.type;
                 item.Image.sprite = _hidenObject.Image;
                 item.IsOccupied = true;
