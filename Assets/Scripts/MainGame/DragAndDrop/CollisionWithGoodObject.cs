@@ -6,19 +6,19 @@ public class CollisionWithGoodObject : MonoBehaviour
 {
     private GameObject _suitableObject;
     [SerializeField] private string _suitableObjectName;
-    [HideInInspector] public bool _canBeDrag = false;
+    [HideInInspector] public bool _canBeDrop = false;
 
     private void Start()
     {
         _suitableObject = GameObject.Find(_suitableObjectName);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.gameObject == _suitableObject)
+        if(other.gameObject == _suitableObject)
         {
             Debug.Log("Collision With Good Object");
-            _canBeDrag = true;
+            _canBeDrop = true;
         }
     }
 }

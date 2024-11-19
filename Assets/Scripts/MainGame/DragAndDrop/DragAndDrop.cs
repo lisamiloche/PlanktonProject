@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using static UnityEditor.Progress;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -11,12 +12,16 @@ public class DragAndDrop : MonoBehaviour
 
     [SerializeField] private GameObject _panneau;
     [SerializeField] private GameObject _autre;
+    [SerializeField] private float _speed;
 
     private GameObject _dragObject = null;
     private Vector3 PositionMouse;
+    private Vector3 mousePosition;
     private GameObject _instance = null;
     private CollisionWithGoodObject _collisionObj;
-    public bool _isDragging = false; 
+    public bool _isDragging = false;
+    private bool _stopDrag = false;
+    Vector3 _dragPosition;
 
     private void Update()
     {
@@ -32,34 +37,52 @@ public class DragAndDrop : MonoBehaviour
         {
             _collisionObj = _instance.GetComponent<CollisionWithGoodObject>();
 
-            if (_isDragging && !_collisionObj._canBeDrag) // => faire fonctionner ce putain de truc
+            if (_isDragging)
             {
-                _instance.transform.position = PositionMouse;
+                if (Input.GetMouseButtonUp(0))
+                {
+                    if(!_collisionObj._canBeDrop)
+                        _stopDrag = true;
+                    else
+                    {
+                        _isDragging = false;
+                        NoMoreOccupied();
+                    }
+                }
             }
 
-            else if (_collisionObj._canBeDrag)
-            {
-                _isDragging = false;
-                //faire disparaitre l'objet de l'inventaire lorsqu'il est bien posé au bon endroit
-            }
+            if (_stopDrag)
+                StopDrag();
+            else if (!_stopDrag && _isDragging)
+                _instance.transform.position = PositionMouse;
         }
         else
             _collisionObj = null;
     }
 
+    private void NoMoreOccupied()
+    {
+        _mergeObjects.IsOccupied = false;
+        _mergeObjects.Image.sprite = null;
+        Inventory.Instance.ItemInInventory--;
+    }
+
     private void GetMousePosition()
     {
-        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Input.mousePosition;
         mousePosition.z = 10;
         PositionMouse = Camera.main.ScreenToWorldPoint(mousePosition);
     }
 
-    private void InstantiateAnObject(GameObject gameObject)
+    private void InstantiateAnObject(GameObject instance)
     { //L'objet en instance (prefab) n'a pas le script "InteractiveObject" sur lui, afin de bloquer l'inventaire pendant le DragAndDrop
-        _isDragging = true;
-        if (_instance == null)
+        
+        if (_instance == null && !_stopDrag && !_isDragging && Vector2.Distance(transform.position, PositionMouse) < 0.5)
         {
-            _instance = Instantiate(gameObject, PositionMouse, Quaternion.identity);
+            _isDragging = true;
+            _instance = Instantiate(instance, PositionMouse, Quaternion.identity);
+            _dragPosition = _instance.transform.position;
+            _stopDrag = false;
         }
         else return;
     }
@@ -69,12 +92,23 @@ public class DragAndDrop : MonoBehaviour
         if (_mergeObjects.type == TypesManager.Types.Panneau)
         {
             _dragObject = _panneau;
-            Debug.Log("Panneau");
+            //Debug.Log("Panneau");
         }
         else if (_mergeObjects.type == TypesManager.Types.Autres)
         {
             _dragObject = _autre;
-            Debug.Log("Autre");
+            //Debug.Log("Autre");
+        }
+    }
+
+    private void StopDrag()
+    {
+        _instance.transform.position = Vector2.MoveTowards(_instance.transform.position, _dragPosition, _speed * Time.deltaTime);
+        
+        if (_instance.transform.position == _dragPosition)
+        {
+            Destroy(_instance);
+            _stopDrag = false; _isDragging = false; _mergeObjects._drag = false;
         }
     }
 }

@@ -2080,7 +2080,7 @@ GameObject:
   - component: {fileID: 1685570423}
   - component: {fileID: 1685570424}
   m_Layer: 0
-  m_Name: __Dialogs__
+  m_Name: CANVA__Dialogs__
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
