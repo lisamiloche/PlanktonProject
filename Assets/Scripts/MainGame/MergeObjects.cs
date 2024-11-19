@@ -60,7 +60,7 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("enter");
+        Debug.Log("enter" + type.ToString());
         _isOn = true;
     }
 

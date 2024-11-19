@@ -6,6 +6,11 @@ using UnityEngine;
 [Serializable]
 public class ListImageMerge
 {
-    public TypesManager GetType;
+    public enum Types
+    {
+        Panneau,
+        Autres
+    }
+    public Types type;
     public Sprite Sprite;
 }

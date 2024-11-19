@@ -72,7 +72,15 @@ public class Inventory : MonoBehaviour
                     ItemInInventory--;
                 }
                 NumberToMerge = 0;
-                //ItemToMerge[0].Image.sprite = ;
+                foreach (var item in MergeSprites)
+                {
+                    if (item.type.ToString() == ItemToMerge[0].type.ToString())
+                    {
+                        ItemToMerge[0].Image.sprite = item.Sprite;
+                    }
+                }
+
+               
                 ItemToMerge.Clear();
             }
         }
