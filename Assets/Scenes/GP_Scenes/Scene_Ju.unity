@@ -2968,6 +2968,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MGlass: {fileID: 691745186}
   MaskingGlass: {fileID: 1581257828}
+  SettingsCanvas: {fileID: 0}
+  Pause: {fileID: 0}
   HidenObjects:
   - {fileID: 200230826}
   - {fileID: 1962817126}

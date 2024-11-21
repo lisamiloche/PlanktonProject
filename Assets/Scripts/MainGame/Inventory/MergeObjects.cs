@@ -11,12 +11,17 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
     [HideInInspector] public bool IsOccupied;
     private bool _isOn = false;
     [HideInInspector] public bool _drag = false; //Ajout Lisa
-    
 
-    void Start()
+    private Inventory Inventory;
+
+    private void Awake()
     {
         Image = GetComponent<Image>();
         Outline = GetComponent<Outline>();
+    }
+    void Start()
+    {
+        Inventory = GetComponent<Inventory>();
         Outline.enabled = false;
         IsOccupied = false;
     }
@@ -31,20 +36,20 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
                 if (Outline.enabled)
                 {
                     Outline.enabled = false;
-                    Inventory.Instance.ItemToMerge.Remove(this); 
-                    Inventory.Instance.NumberToMerge--;
+                    Inventory.ItemToMerge.Remove(this);
+                    Inventory.NumberToMerge--;
                 }
-                else if (Inventory.Instance.NumberToMerge < 3)
+                else if (Inventory.NumberToMerge < 3)
                 {
-                    Inventory.Instance.ItemToMerge.Add(this);
-                    Inventory.Instance.NumberToMerge++;
+                    Inventory.ItemToMerge.Add(this);
+                    Inventory.NumberToMerge++;
                     Outline.enabled = true;
                 }
-                else if (Inventory.Instance.NumberToMerge >= 3)
+                else if (Inventory.NumberToMerge >= 3)
                 {
-                    Inventory.Instance.ItemToMerge[0].Outline.enabled = false;
-                    Inventory.Instance.ItemToMerge.RemoveAt(0);
-                    Inventory.Instance.ItemToMerge.Add(this);
+                    Inventory.ItemToMerge[0].Outline.enabled = false;
+                    Inventory.ItemToMerge.RemoveAt(0);
+                    Inventory.ItemToMerge.Add(this);
                     Outline.enabled = true;
                 }
 

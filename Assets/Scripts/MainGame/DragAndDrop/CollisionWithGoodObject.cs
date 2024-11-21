@@ -21,4 +21,13 @@ public class CollisionWithGoodObject : MonoBehaviour
             _canBeDrop = true;
         }
     }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject == _suitableObject)
+        {
+            Debug.Log("Not More Collision With Good Object");
+            _canBeDrop = false;
+        }
+    }
 }

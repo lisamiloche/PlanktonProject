@@ -8,27 +8,39 @@ public class InteractiveObjects : TypesManager
 {
     public Sprite Image;
     public Renderer OrderRenderer;
+    private Collider2D Collider;
 
     bool _isHiden = false;
 
-    void Start()
+    private void Awake()
     {
         OrderRenderer = GetComponent<Renderer>();
+        Collider = GetComponent<Collider2D>();
+    }
 
+    void Start()
+    {
         if (OrderRenderer.sortingOrder == 0)
         {
             _isHiden = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            if (hit.collider == Collider)
+            {
+                OnClick();
+            }
+        }
     }
 
-
-    private void OnMouseDown()
+    private void OnClick()
     {
         if (!_isHiden)
         {

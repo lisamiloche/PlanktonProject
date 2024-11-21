@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,9 @@ public class GameManager : MonoBehaviour
     
     public GameObject MGlass;
     public SpriteMask MaskingGlass;
+
+    public GameObject SettingsCanvas;
+    public GameObject Pause;
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -38,8 +42,34 @@ public class GameManager : MonoBehaviour
             else { MGlass.SetActive(true); }
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            Pause.SetActive(true);
+        }
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        Pause.SetActive(false);
+    }
+
+    public void Settings()
+    {
+        SettingsCanvas.SetActive(true);
+    }
+
+    public void Back()
+    {
+        SettingsCanvas.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
     }
 
 
-    
 }
