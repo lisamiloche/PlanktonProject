@@ -12,8 +12,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _character;
     [SerializeField] private Collider2D _charaCol;
-
-    [SerializeField] private GameObject _dialogBox; //ajouter une deuxième bulle pour le deuxième perso
+    [SerializeField] private GameObject _dialogBox;
 
     [Header("Outline")]
     [SerializeField] private Material _material;
@@ -33,13 +32,10 @@ public class DialogManager : MonoBehaviour
     private bool _isLaunched = false;
     private bool _isFinished = false;
 
-
     private Vector3 _lastPosition;
-    private float _timeThreshold = 0.1f;
-    private float _timeSinceLastMove;
     private Vector3 _playerPos;
     private Vector3 _characterPos;
-
+    private bool _isPlayerLeft = false;
 
     private void Start()
     {
@@ -48,7 +44,6 @@ public class DialogManager : MonoBehaviour
         _blur.SetActive(false);
         _dialog = GetComponent<Dialog>();
         _lastPosition = _player.position;
-        _timeSinceLastMove = 0f;
     }
 
     private void Update()
@@ -68,11 +63,16 @@ public class DialogManager : MonoBehaviour
                     _characterPos = _character.position;
 
                     _isLaunched = true;
-                    _blur.SetActive(true); // Voir pour que le blur soit que sur le background
+                    _blur.SetActive(true);
 
-                    // calculer : si on est à droite du perso on est déplacé à droite sinon à gauche (+ scale pour tourner sprite dans le bon sens)
-                    _player.position = _transitionSpot01.position; _player.localScale += new Vector3(2, 2, 2);
-                    _character.position = _transitionSpot02.position; _character.localScale += new Vector3(2, 2, 2);
+                    if(Vector2.Distance(_player.position, _transitionSpot01.position) < Vector2.Distance(_character.position, _transitionSpot01.position))
+                    {
+                        Placement(_transitionSpot01.position, _transitionSpot02.position, true);
+                    }
+                    else
+                    {
+                        Placement(_transitionSpot02.position, _transitionSpot01.position, false);
+                    }
                 }
             }
             else
@@ -93,50 +93,82 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            // code pour jouer le son pour comprendre que l'on ne peut plus dialoguer
+            //Jouer le son pour comprendre que l'on ne peut plus dialoguer
         }
+    }
 
+    private void Placement(Vector3 spot01, Vector3 spot02, bool _isLeft)
+    {
+        _player.position = spot01; _player.localScale += new Vector3(2, 2, 2);
+        _character.position = spot02; _character.localScale += new Vector3(2, 2, 2);
+        _isPlayerLeft = _isLeft;
+    }
+
+    private void GetBack(Vector2 spot01, Vector2 spot2) // spot 1 : _transitionSpot01.position / spot 2 : _transitionSpot02.position
+    {
+        _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
+        _character.position = Vector3.MoveTowards(_character.position, spot2, _speed * Time.deltaTime);
+    }
+
+    private void Finished()
+    {
+        _blur.SetActive(false);
+        _player.position = _playerPos; _player.localScale = Vector3.one;
+        _character.position = _characterPos; _character.localScale = Vector3.one;
+        _isFinished = true;
     }
 
     void AnimationDialog()
     {
-        if(_player.position != _finalSpot01.transform.position || _character.position != _finalSpot02.transform.position)
+        if (_isPlayerLeft)
         {
-            _player.position = Vector3.MoveTowards(_player.position, _finalSpot01.transform.position, _speed * Time.deltaTime);
-            _character.position = Vector3.MoveTowards(_character.position, _finalSpot02.transform.position, _speed * Time.deltaTime);
+            DirectionAndLaunch(_finalSpot01.transform.position, _finalSpot02.transform.position);
+        }
+        else
+        {
+            DirectionAndLaunch(_finalSpot02.transform.position, _finalSpot01.transform.position);
+        }
+    }
+
+    private void DirectionAndLaunch(Vector3 spot01, Vector3 spot02)
+    {
+        if (_player.position != spot01 || _character.position != spot02)
+        {
+            _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
+            _character.position = Vector3.MoveTowards(_character.position, spot02, _speed * Time.deltaTime);
         }
         else
         {
             _dialogBox.SetActive(true);
-        }
+
+            if (_dialog.TextNameCharacter.text == _player.name)
+            { //Si nécessaire possibilité de scale -1 pour retourner la box si jamais il y a un sens particulier
+                if(_isPlayerLeft)
+                    _dialogBox.transform.position = new Vector2(_player.position.x+2, _player.position.y+0.5f);
+                else
+                    _dialogBox.transform.position = new Vector2(_player.position.x-2, _player.position.y + 0.5f);
+            }
+            else if (_dialog.TextNameCharacter.text == _character.name)
+            {
+                if(_isPlayerLeft)
+                    _dialogBox.transform.position = new Vector2(_character.position.x-2, _character.position.y+0.5f);
+                else
+                    _dialogBox.transform.position = new Vector2(_character.position.x+2, _character.position.y + 0.5f);
+            }
+        }  
     }
 
     void AnimationReturn()
     {
         _dialogBox.SetActive(false);
-        _player.position = Vector3.MoveTowards(_player.position, _transitionSpot01.position, _speed * Time.deltaTime);
-        _character.position = Vector3.MoveTowards(_character.position, _transitionSpot02.position, _speed * Time.deltaTime);
+        if(_isPlayerLeft)
+            GetBack(_transitionSpot01.position, _transitionSpot02.position);
+        else
+            GetBack(_transitionSpot02.position, _transitionSpot01.position);
 
-        if(_player.position == _transitionSpot01.position && _character.position == _transitionSpot02.position)
-        {
-            _blur.SetActive(false);
-            _player.position = _playerPos; _player.localScale = Vector3.one;
-            _character.position = _characterPos; _character.localScale = Vector3.one;
-            _isFinished = true;
-        }
+        if ((_player.position == _transitionSpot02.position && _character.position == _transitionSpot01.position) || (_player.position == _transitionSpot01.position && _character.position == _transitionSpot02.position))
+            Finished(); 
     }
 }
-
-//FAIT// Outline apparait quand on passe le curseur sur le personnage 
-//FAIT// On clique dessus (clic droit) pour engager le dialogue 
-//FAIT// Le bg devient flou
-//FAIT// Les persos se TP hors de l'écran et se scale ++
-//FAIT// Déplacement des personnages qui reviennent au centre de l'image (linéaire)
-//FAIT// Gestion des dialogues
-//FAIT// Apparition et disparition dialogues
-//FAIT// Déplacement des personnages en sens inverse
-//FAIT// Fond d'écran plus flou
-//FAIT// Réapparition des persos comme ils étaient 
-//FAIT// Si on a déjà dialogué, on ne peut plus le faire / ajouter son pour comprendre
 
 // test => Voir pour que ça fonctionne avec plusieurs dialogues/persos différents
