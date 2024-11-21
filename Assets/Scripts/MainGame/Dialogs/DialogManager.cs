@@ -13,6 +13,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Transform _character;
     [SerializeField] private Collider2D _charaCol;
     [SerializeField] private GameObject _dialogBox;
+    [SerializeField] private GameObject[] _dialogsList;
 
     [Header("Outline")]
     [SerializeField] private Material _material;
@@ -36,6 +37,8 @@ public class DialogManager : MonoBehaviour
     private Vector3 _playerPos;
     private Vector3 _characterPos;
     private bool _isPlayerLeft = false;
+    private Vector3 _playerScale;
+    private Vector3 _characterScale;
 
     private void Start()
     {
@@ -44,6 +47,8 @@ public class DialogManager : MonoBehaviour
         _blur.SetActive(false);
         _dialog = GetComponent<Dialog>();
         _lastPosition = _player.position;
+        _playerScale = _player.localScale;
+        _characterScale = _character.localScale;
     }
 
     private void Update()
@@ -59,6 +64,9 @@ public class DialogManager : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
+                    foreach (var other in _dialogsList)
+                        other.SetActive(false);
+
                     _playerPos = _player.position;
                     _characterPos = _character.position;
 
@@ -77,6 +85,7 @@ public class DialogManager : MonoBehaviour
             }
             else
                 _sprRenderer.material = _mat;
+                
 
             if (_isLaunched)
             {
@@ -93,6 +102,8 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
+            foreach (var other in _dialogsList)
+                other.SetActive(true);
             //Jouer le son pour comprendre que l'on ne peut plus dialoguer
         }
     }
@@ -113,8 +124,8 @@ public class DialogManager : MonoBehaviour
     private void Finished()
     {
         _blur.SetActive(false);
-        _player.position = _playerPos; _player.localScale = Vector3.one;
-        _character.position = _characterPos; _character.localScale = Vector3.one;
+        _player.position = _playerPos; _player.localScale = _playerScale;
+        _character.position = _characterPos; _character.localScale = _characterScale;
         _isFinished = true;
     }
 

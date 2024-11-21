@@ -15,7 +15,7 @@ public class Dialog : MonoBehaviour
 
     [Header("Autres variables")]
     private int _sequenceNumber = 0;
-    [HideInInspector] public bool InProgress = true;
+    public bool InProgress = true;
     //public bool _boxIsActive = false;
 
     // Faire en sorte que le texte s'écrive au fur et à mesure aussi pour le premier dialogue.
