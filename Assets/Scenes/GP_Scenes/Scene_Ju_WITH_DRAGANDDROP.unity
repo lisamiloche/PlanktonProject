@@ -1080,6 +1080,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+--- !u!1 &542560464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  m_PrefabInstance: {fileID: 542560463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &583202199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MGlass: {fileID: 691745186}
   MaskingGlass: {fileID: 1581257828}
+  SettingsCanvas: {fileID: 0}
+  Pause: {fileID: 0}
   HidenObjects:
   - {fileID: 200230826}
   - {fileID: 1962817126}
@@ -3465,8 +3472,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mergeObjects: {fileID: 1753525015}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
-  _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
-  _speed: 200
+  _autre: {fileID: 542560464}
+  _speed: 10
   _isDragging: 0
 --- !u!1 &1771319991
 GameObject:

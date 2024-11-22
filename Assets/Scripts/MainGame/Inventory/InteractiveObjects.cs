@@ -9,6 +9,7 @@ public class InteractiveObjects : TypesManager
     public Sprite Image;
     public Renderer OrderRenderer;
     private Collider2D Collider;
+    [SerializeField] private LayerMask _layerMask;
 
     bool _isHiden = false;
 
@@ -29,9 +30,9 @@ public class InteractiveObjects : TypesManager
     private void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, _layerMask);
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             if (hit.collider == Collider)
             {

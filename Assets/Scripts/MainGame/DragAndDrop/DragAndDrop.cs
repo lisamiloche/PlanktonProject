@@ -25,12 +25,15 @@ public class DragAndDrop : MonoBehaviour
 
     private void Update()
     {
+        if(_instance != null)
+            Debug.Log(_instance.name);
+
         GetMousePosition();
 
         if (_mergeObjects._drag == true)
         {
             FindObjectWithType(); 
-            InstantiateAnObject(_dragObject); // Faire en sorte que l'objet soit instancié PAR DESSUS l'UI !!!!!!!!
+            InstantiateAnObject(_dragObject);
         }
 
         if (_instance != null)
@@ -90,23 +93,19 @@ public class DragAndDrop : MonoBehaviour
     private void FindObjectWithType()
     { // Lier d'autres gameObject à leur Type si neccessaire.
         if (_mergeObjects.type == TypesManager.Types.Panneau)
-        {
             _dragObject = _panneau;
-            //Debug.Log("Panneau");
-        }
         else if (_mergeObjects.type == TypesManager.Types.Autres)
-        {
             _dragObject = _autre;
-            //Debug.Log("Autre");
-        }
     }
 
     private void StopDrag()
     {
         _instance.transform.position = Vector2.MoveTowards(_instance.transform.position, _dragPosition, _speed * Time.deltaTime);
-        
-        if (_instance.transform.position == _dragPosition)
+        Debug.Log(Vector2.Distance(_instance.transform.position, _dragPosition));
+
+        if (new Vector2(_instance.transform.position.x, _instance.transform.position.y) == new Vector2(_dragPosition.x, _dragPosition.y))      
         {
+            Debug.Log("Je suis là");
             Destroy(_instance);
             _stopDrag = false; _isDragging = false; _mergeObjects._drag = false;
         }
