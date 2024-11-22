@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     
     public GameObject MGlass;
     public SpriteMask MaskingGlass;
-
+    [SerializeField] private GameObject _grain;
+    private bool _initialized = false;
+ 
     public GameObject SettingsCanvas;
     public GameObject Pause;
 
-    public List<InteractiveObjects> HidenObjects;
+        public List<InteractiveObjects> HidenObjects;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        _grain.SetActive(false);
     }
     void Start()
     {
@@ -38,8 +41,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            if (MGlass.activeSelf) { MGlass.SetActive(false); }
-            else { MGlass.SetActive(true); }
+            if (MGlass.activeSelf) { MGlass.SetActive(false); _grain.SetActive(false); }
+            else { MGlass.SetActive(true); _grain.SetActive(true); }
         }
 
 

@@ -41,6 +41,7 @@ public class MagnifyingGlass : MonoBehaviour
 
     void Start()
     {
+
         Scale = Mask.transform.localScale;
         CanShrink = false;
         coco = StartCoroutine(WaitToGoInventory());
@@ -112,20 +113,27 @@ public class MagnifyingGlass : MonoBehaviour
     IEnumerator WaitToGoInventory()
     {
          
-        yield return new WaitForSeconds(3f); 
-        foreach (var item in Inventory.Instance.InventoryBoxs)
+        yield return new WaitForSeconds(3f);
+
+        if (_hidenObject != null)
         {
-            if (!item.IsOccupied)
+            foreach (var item in Inventory.Instance.InventoryBoxs)
             {
-                Inventory.Instance.ItemInInventory++;
-                Debug.Log(item.type.ToString());
-                item.type = _hidenObject.type;
-                item.Image.sprite = _hidenObject.Image;
-                item.IsOccupied = true;
-                break;
+                if (!item.IsOccupied)
+                {
+                    Inventory.Instance.ItemInInventory++;
+                    Debug.Log(item.type.ToString());
+                    if (_hidenObject != null)
+                    {
+                        item.type = _hidenObject.type;
+                        item.Image.sprite = _hidenObject.Image;
+                    }
+                    item.IsOccupied = true;
+                    break;
+                }
             }
+            Destroy(_hidenObject.gameObject);
         }
-        Destroy(_hidenObject.gameObject);
     }
 
 }
