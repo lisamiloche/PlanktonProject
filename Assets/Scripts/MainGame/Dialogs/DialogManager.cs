@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class DialogManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Collider2D _charaCol;
     [SerializeField] private GameObject _dialogBox;
     [SerializeField] private GameObject[] _dialogsList;
+    [SerializeField] private LayerMask _layerMask;
 
     [Header("Outline")]
     [SerializeField] private Material _material;
@@ -53,10 +55,10 @@ public class DialogManager : MonoBehaviour
 
     private void Update()
     {
-        if (_isFinished == false)
+        if (_isFinished == false) //Corriger ce truc moche
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, _layerMask);
 
             if (hit.collider == _charaCol && !_isLaunched && _dialog.InProgress && Vector3.Distance(_player.position, _lastPosition) < 0.01f)
             {
@@ -115,7 +117,7 @@ public class DialogManager : MonoBehaviour
         _isPlayerLeft = _isLeft;
     }
 
-    private void GetBack(Vector2 spot01, Vector2 spot2) // spot 1 : _transitionSpot01.position / spot 2 : _transitionSpot02.position
+    private void GetBack(Vector2 spot01, Vector2 spot2)
     {
         _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
         _character.position = Vector3.MoveTowards(_character.position, spot2, _speed * Time.deltaTime);
@@ -181,5 +183,3 @@ public class DialogManager : MonoBehaviour
             Finished(); 
     }
 }
-
-// test => Voir pour que ça fonctionne avec plusieurs dialogues/persos différents

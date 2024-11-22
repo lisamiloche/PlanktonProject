@@ -11,10 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject MGlass;
     public SpriteMask MaskingGlass;
     [SerializeField] private GameObject _grain;
-    private bool _initialized = false;
  
     public GameObject SettingsCanvas;
     public GameObject Pause;
+    public GameObject Player;
 
         public List<InteractiveObjects> HidenObjects;
 
