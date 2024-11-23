@@ -8,7 +8,7 @@ public class TriggerDialogs : MonoBehaviour
     [SerializeField] private TriggerZoneDialog _zoneDialog;
     [SerializeField] private GameObject _blur;
     [SerializeField] private GameObject _dialogBox;
-    [SerializeField] private Transform _playerTrsfm;
+    [SerializeField] private GameObject _player;
     private Dialog _dialog;
 
     private void Start()

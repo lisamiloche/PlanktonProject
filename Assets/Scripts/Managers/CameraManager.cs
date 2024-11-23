@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -8,49 +10,40 @@ using UnityEngine.UIElements;
 public class CameraManager : MonoBehaviour
 {
     [SerializeField] private Transform _player;
-    [SerializeField] private float _marge;
-    [SerializeField] private float _speed;
-   
-    private bool _isLeft;
-    private bool _isRight;
-    private Vector3 Playerpos;
+    [SerializeField] private Transform _inventory;
+    [SerializeField] private Vector2 _minBounds;
+    [SerializeField] private Vector2 _maxBounds;
+    [SerializeField] private DialogManager[] _dialogManagers;
+
+    private Camera _camera;
+    private float _cameraWidth;
+    public bool _isMoving = true;
 
     private void Start()
     {
-        Playerpos = new Vector3(_player.transform.position.x, transform.position.y, transform.position.z);
+        _camera = GetComponent<Camera>();
+        _cameraWidth = _camera.orthographicSize * _camera.aspect;
     }
 
-    void Update()
+    private void Update()
     {
-        float screenPosX = gameObject.GetComponent<Camera>().WorldToScreenPoint(_player.position).x; 
-        float screenWidth = Screen.width;  
-
-        if (screenPosX < _marge)
+        foreach (DialogManager dialogManager in _dialogManagers)
         {
-            _isLeft = true;
+            Debug.Log(dialogManager._isInDialog);
 
-        }
-        else if (screenPosX > screenWidth - _marge)
-        {
-            _isRight = true;
+            if (dialogManager._isInDialog)
+                _isMoving = false;
         }
 
-        if (_isLeft)
+        if(_isMoving)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Playerpos, _speed * Time.deltaTime);
-            if (transform.position == Playerpos)
-            {
-                _isLeft = false;
-            }
-        }
+            Vector3 targetPos = _player.transform.position;
+            transform.position = new Vector3(targetPos.x, transform.position.y, -1);
 
-        if (_isRight)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Playerpos, _speed * Time.deltaTime);
-            if (transform.position == Playerpos)
-            {
-                _isRight = false;
-            }
+            float clampedX = Mathf.Clamp(targetPos.x, _minBounds.x + _cameraWidth, _maxBounds.x - _cameraWidth);
+            transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+
+            _inventory.transform.position = new Vector3(transform.position.x, _inventory.transform.position.y, _inventory.transform.position.z);
         }
     }
 }

@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Collider2D _charaCol;
     [SerializeField] private GameObject _dialogBox;
     [SerializeField] private GameObject[] _dialogsList;
+    [SerializeField] private Transform _camera;
     [SerializeField] private LayerMask _layerMask;
 
     [Header("Outline")]
@@ -26,14 +27,15 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private GameObject _blur;
 
     [Header("AnimDialog")]
-    [SerializeField] private Transform _transitionSpot01;
-    [SerializeField] private Transform _transitionSpot02;
-    [SerializeField] private Transform _finalSpot01;
-    [SerializeField] private Transform _finalSpot02;
+    private Vector3 _transitionSpot01;
+    private Vector3 _transitionSpot02;
+    private Vector3 _finalSpot01;
+    private Vector3 _finalSpot02;
     [SerializeField] private float _speed;
     [SerializeField] private Dialog _dialog;
     private bool _isLaunched = false;
     private bool _isFinished = false;
+    public bool _isInDialog = false;
 
     private Vector3 _lastPosition;
     private Vector3 _playerPos;
@@ -41,6 +43,7 @@ public class DialogManager : MonoBehaviour
     private bool _isPlayerLeft = false;
     private Vector3 _playerScale;
     private Vector3 _characterScale;
+    [SerializeField] private CameraManager[] _cameraManager;
 
     private void Start()
     {
@@ -66,6 +69,8 @@ public class DialogManager : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
+                    _blur.SetActive(true);
+
                     foreach (var other in _dialogsList)
                         other.SetActive(false);
 
@@ -73,15 +78,16 @@ public class DialogManager : MonoBehaviour
                     _characterPos = _character.position;
 
                     _isLaunched = true;
-                    _blur.SetActive(true);
+                    _isInDialog = true;
+                    
 
-                    if(Vector2.Distance(_player.position, _transitionSpot01.position) < Vector2.Distance(_character.position, _transitionSpot01.position))
+                    if(Vector2.Distance(_player.position, _transitionSpot01) < Vector2.Distance(_character.position, _transitionSpot01))
                     {
-                        Placement(_transitionSpot01.position, _transitionSpot02.position, true);
+                        Placement(_transitionSpot01, _transitionSpot02, true);
                     }
                     else
                     {
-                        Placement(_transitionSpot02.position, _transitionSpot01.position, false);
+                        Placement(_transitionSpot02, _transitionSpot01, false);
                     }
                 }
             }
@@ -90,7 +96,7 @@ public class DialogManager : MonoBehaviour
                 
 
             if (_isLaunched)
-            {
+            {                
                 AnimationDialog();
             }
 
@@ -108,6 +114,18 @@ public class DialogManager : MonoBehaviour
                 other.SetActive(true);
             //Jouer le son pour comprendre que l'on ne peut plus dialoguer
         }
+        if (!_isInDialog)
+        {
+            foreach(var camera in _cameraManager)
+            {
+                camera._isMoving = true;
+            }
+        }
+
+        _transitionSpot01 = new Vector3(_camera.position.x - 12, _camera.position.y, 0);
+        _transitionSpot02 = new Vector3(_camera.position.x + 12, _camera.position.y, 0);
+        _finalSpot01 = new Vector3((_camera.position.x - 3), _camera.position.y, 0);
+        _finalSpot02 = new Vector3((_camera.position.x + 3), _camera.position.y, 0);
     }
 
     private void Placement(Vector3 spot01, Vector3 spot02, bool _isLeft)
@@ -129,17 +147,18 @@ public class DialogManager : MonoBehaviour
         _player.position = _playerPos; _player.localScale = _playerScale;
         _character.position = _characterPos; _character.localScale = _characterScale;
         _isFinished = true;
+        _isInDialog = false;
     }
 
     void AnimationDialog()
     {
         if (_isPlayerLeft)
         {
-            DirectionAndLaunch(_finalSpot01.transform.position, _finalSpot02.transform.position);
+            DirectionAndLaunch(_finalSpot01, _finalSpot02);
         }
         else
         {
-            DirectionAndLaunch(_finalSpot02.transform.position, _finalSpot01.transform.position);
+            DirectionAndLaunch(_finalSpot02, _finalSpot01);
         }
     }
 
@@ -175,11 +194,11 @@ public class DialogManager : MonoBehaviour
     {
         _dialogBox.SetActive(false);
         if(_isPlayerLeft)
-            GetBack(_transitionSpot01.position, _transitionSpot02.position);
+            GetBack(_transitionSpot01, _transitionSpot02);
         else
-            GetBack(_transitionSpot02.position, _transitionSpot01.position);
+            GetBack(_transitionSpot02, _transitionSpot01);
 
-        if ((_player.position == _transitionSpot02.position && _character.position == _transitionSpot01.position) || (_player.position == _transitionSpot01.position && _character.position == _transitionSpot02.position))
+        if ((_player.position == _transitionSpot02 && _character.position == _transitionSpot01) || (_player.position == _transitionSpot01 && _character.position == _transitionSpot02))
             Finished(); 
     }
 }
