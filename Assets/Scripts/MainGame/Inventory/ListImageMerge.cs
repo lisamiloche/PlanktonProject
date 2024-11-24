@@ -11,6 +11,7 @@ public class ListImageMerge
         Panneau,
         BoutDeBois,
         Vaisseau,
+        Boulon,
         Autres
     }
     public Types type;

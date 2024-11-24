@@ -11,6 +11,7 @@ public class TypesManager : MonoBehaviour
         Panneau,
         BoutDeBois,
         Vaisseau,
+        Boulon,
         Autres
     }
     public Types type;
