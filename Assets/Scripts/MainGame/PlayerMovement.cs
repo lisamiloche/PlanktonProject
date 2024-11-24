@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _targetPosition = transform.position;
     }
-
-    //Prendre en considération le sens vers lequel le joueur est tourné pour changer la scale du sprite.
     private void Update()
     {
         if(Input.GetMouseButtonDown(0) && transform.position == _targetPosition)

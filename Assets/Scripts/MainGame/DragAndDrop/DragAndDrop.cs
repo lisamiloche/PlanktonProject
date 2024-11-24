@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using static UnityEditor.Progress;
+using UnityEditor.Rendering;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class DragAndDrop : MonoBehaviour
 
     [SerializeField] private GameObject _panneau;
     [SerializeField] private GameObject _autre;
+    [SerializeField] private GameObject[] _boutDeBois;
     [SerializeField] private float _speed;
+    [SerializeField] private string _imageName;
 
     private GameObject _dragObject = null;
     private Vector3 PositionMouse;
@@ -22,11 +25,17 @@ public class DragAndDrop : MonoBehaviour
     public bool _isDragging = false;
     private bool _stopDrag = false;
     Vector3 _dragPosition;
+    InteractiveObjects interactiveObjects;
+    [SerializeField] private Image _image;
 
     private void Update()
     {
-        if(_instance != null)
-            Debug.Log(_instance.name);
+        if (_image.sprite != null)
+        {
+            _imageName = _image.sprite.name;
+        }
+        else
+            Debug.Log("Sprite is null");
 
         GetMousePosition();
 
@@ -78,8 +87,7 @@ public class DragAndDrop : MonoBehaviour
     }
 
     private void InstantiateAnObject(GameObject instance)
-    { //L'objet en instance (prefab) n'a pas le script "InteractiveObject" sur lui, afin de bloquer l'inventaire pendant le DragAndDrop
-        
+    {        
         if (_instance == null && !_stopDrag && !_isDragging && Vector2.Distance(transform.position, PositionMouse) < 0.5)
         {
             _isDragging = true;
@@ -91,9 +99,26 @@ public class DragAndDrop : MonoBehaviour
     }
 
     private void FindObjectWithType()
-    { // Lier d'autres gameObject à leur Type si neccessaire.
+    {
         if (_mergeObjects.type == TypesManager.Types.Panneau)
             _dragObject = _panneau;
+        else if (_mergeObjects.type == TypesManager.Types.BoutDeBois)
+        {
+            foreach(var item in _boutDeBois)
+            {
+                SpriteRenderer spriteRenderer = item.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer.sprite != null)
+                {
+                    if (spriteRenderer.sprite.name == _imageName)
+                    {
+                        _dragObject = item;
+                    }
+                }
+                else
+                    Debug.Log("Sprite is null");
+            }
+        }
         else if (_mergeObjects.type == TypesManager.Types.Autres)
             _dragObject = _autre;
     }

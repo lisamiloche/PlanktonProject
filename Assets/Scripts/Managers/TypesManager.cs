@@ -9,6 +9,7 @@ public class TypesManager : MonoBehaviour
     public enum Types
     {
         Panneau,
+        BoutDeBois,
         Autres
     }
     public Types type;

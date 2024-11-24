@@ -9,6 +9,7 @@ public class ListImageMerge
     public enum Types
     {
         Panneau,
+        BoutDeBois,
         Autres
     }
     public Types type;
