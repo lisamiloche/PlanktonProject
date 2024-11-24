@@ -10,6 +10,7 @@ public class ListImageMerge
     {
         Panneau,
         BoutDeBois,
+        Vaisseau,
         Autres
     }
     public Types type;

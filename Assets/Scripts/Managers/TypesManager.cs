@@ -10,6 +10,7 @@ public class TypesManager : MonoBehaviour
     {
         Panneau,
         BoutDeBois,
+        Vaisseau,
         Autres
     }
     public Types type;

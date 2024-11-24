@@ -15,10 +15,12 @@ public class DragAndDrop : MonoBehaviour
     [SerializeField] private GameObject _panneau;
     [SerializeField] private GameObject _autre;
     [SerializeField] private GameObject[] _boutDeBois;
+    [SerializeField] private GameObject[] _vaisseau;
     [SerializeField] private float _speed;
     [SerializeField] private string _imageName;
+    [SerializeField] private GameManager _gameManager;
 
-    private GameObject _dragObject = null;
+    private GameObject _dragObject = null; 
     private Vector3 PositionMouse;
     private Vector3 mousePosition;
     private GameObject _instance = null;
@@ -79,7 +81,8 @@ public class DragAndDrop : MonoBehaviour
         _mergeObjects.Image.sprite = null;
         Inventory.Instance.ItemInInventory--;
 
-        //ici code pour sortir de la scène
+
+        _gameManager._nbOfObjDropped++;
     }
 
     private void GetMousePosition()
@@ -108,6 +111,23 @@ public class DragAndDrop : MonoBehaviour
         else if (_mergeObjects.type == TypesManager.Types.BoutDeBois)
         {
             foreach(var item in _boutDeBois)
+            {
+                SpriteRenderer spriteRenderer = item.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer.sprite != null)
+                {
+                    if (spriteRenderer.sprite.name == _imageName)
+                    {
+                        _dragObject = item;
+                    }
+                }
+                else
+                    Debug.Log("Sprite is null");
+            }
+        }
+        else if (_mergeObjects.type == TypesManager.Types.Vaisseau)
+        {
+            foreach (var item in _vaisseau)
             {
                 SpriteRenderer spriteRenderer = item.GetComponent<SpriteRenderer>();
 

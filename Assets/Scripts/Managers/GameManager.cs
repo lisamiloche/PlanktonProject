@@ -16,7 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject Pause;
     public GameObject Player;
 
-        public List<InteractiveObjects> HidenObjects;
+    public List<InteractiveObjects> HidenObjects;
+
+    [SerializeField] private int _nbOfObjToDrop;
+    [HideInInspector] public int _nbOfObjDropped;
+    [SerializeField] private bool _needObjToChangeScene;
+
 
     private void Awake()
     {
@@ -30,10 +35,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         _grain.SetActive(false);
-    }
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -51,6 +52,22 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             Pause.SetActive(true);
         }
+
+        Debug.Log(_nbOfObjDropped);
+        if(_needObjToChangeScene)
+        {
+            if (_nbOfObjDropped == _nbOfObjToDrop)
+            {
+                Debug.Log("Changement de scène");
+                //fade + changement de scène
+            }
+        }
+        else
+        {
+            Debug.Log("Pas besoin d'objet spécifique");
+            // voir comment on change de scène
+        }
+        
     }
 
     public void Resume()

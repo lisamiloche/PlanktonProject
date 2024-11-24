@@ -808,8 +808,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 260098412}
 --- !u!114 &269807872
@@ -1648,8 +1650,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 458377088}
 --- !u!1001 &476912114
@@ -1906,8 +1910,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 596311860}
 --- !u!1 &619454218
@@ -2564,8 +2570,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 828403419}
 --- !u!1 &829078106
@@ -3864,8 +3872,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1058425331}
 --- !u!1 &1066360590
@@ -4359,8 +4369,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1137111764}
 --- !u!1 &1138063955
@@ -4848,8 +4860,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1252402531}
 --- !u!1 &1252596486
@@ -4891,6 +4905,9 @@ MonoBehaviour:
   - {fileID: 1097323294}
   - {fileID: 0}
   - {fileID: 0}
+  _nbOfObjToDrop: 1
+  _nbOfObjDropped: 0
+  _needObjToChangeScene: 1
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5129,8 +5146,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1309835898}
 --- !u!1 &1353449796
@@ -5308,8 +5327,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1353449800}
 --- !u!1 &1486167581
@@ -6217,8 +6238,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1644748040}
 --- !u!1 &1670881284
@@ -6823,8 +6846,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1809486743}
 --- !u!1 &1809627172
@@ -7215,8 +7240,10 @@ MonoBehaviour:
   - {fileID: 7912131650363590708, guid: 4b88607d92c55594eb425df267c6a4da, type: 3}
   - {fileID: 1523268772586042805, guid: e157c46104abad64fa569f50a6eb8a01, type: 3}
   - {fileID: 1523268772586042805, guid: 1b7eb4b929b73ee4e9afbdb309854490, type: 3}
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 1252596487}
   _isDragging: 0
   _image: {fileID: 1876248269}
 --- !u!1 &1889211085

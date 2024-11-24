@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5450514929980330492
+--- !u!1 &4994812696153930466
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7275695859994730854}
-  - component: {fileID: 8608897916647842601}
-  - component: {fileID: 4552642226893499227}
-  - component: {fileID: 7904887011142031660}
-  - component: {fileID: 8532202316157514095}
+  - component: {fileID: 4855440585797559697}
+  - component: {fileID: 2052058560827020196}
+  - component: {fileID: 631049048548635787}
+  - component: {fileID: -5863472254674158029}
+  - component: {fileID: -6085166118238185822}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Bout_de_vaisseau_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7275695859994730854
+--- !u!4 &4855440585797559697
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450514929980330492}
+  m_GameObject: {fileID: 4994812696153930466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.85, y: 1.1199999, z: 0}
+  m_LocalPosition: {x: 1.9904261, y: -0.42188942, z: 0}
   m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8608897916647842601
+--- !u!212 &2052058560827020196
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450514929980330492}
+  m_GameObject: {fileID: 4994812696153930466}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04d240c4dfbb0ea49b1f30927084026c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4552642226893499227
+--- !u!61 &631049048548635787
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450514929980330492}
+  m_GameObject: {fileID: 4994812696153930466}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9, y: 7.67}
+    oldSize: {x: 9, y: 9}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,28 +132,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 7.67}
   m_EdgeRadius: 0
---- !u!114 &7904887011142031660
+--- !u!114 &-5863472254674158029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450514929980330492}
+  m_GameObject: {fileID: 4994812696153930466}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecbb48c441dfe1548888216cb9c41529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _suitableObjectName: SuitableObj
+  _suitableObjectName: Vaisseau
   _canBeDrop: 0
---- !u!50 &8532202316157514095
+--- !u!50 &-6085166118238185822
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450514929980330492}
+  m_GameObject: {fileID: 4994812696153930466}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0

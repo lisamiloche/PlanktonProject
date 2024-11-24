@@ -805,8 +805,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 260098412}
 --- !u!114 &269807872
@@ -1522,8 +1524,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 458377088}
 --- !u!1001 &476912114
@@ -1773,8 +1777,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 596311860}
 --- !u!1 &619454218
@@ -2547,8 +2553,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 828403419}
 --- !u!1 &829078106
@@ -3844,8 +3852,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1058425331}
 --- !u!1 &1066360590
@@ -4336,8 +4346,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1137111764}
 --- !u!1 &1138063955
@@ -4822,8 +4834,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1252402531}
 --- !u!1 &1252596486
@@ -4865,6 +4879,9 @@ MonoBehaviour:
   - {fileID: 1097323294}
   - {fileID: 0}
   - {fileID: 0}
+  _nbOfObjToDrop: 0
+  _nbOfObjDropped: 0
+  _needObjToChangeScene: 0
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5100,8 +5117,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1309835898}
 --- !u!1 &1353449796
@@ -5276,8 +5295,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1353449800}
 --- !u!1 &1486167581
@@ -6181,8 +6202,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1644748040}
 --- !u!1 &1670881284
@@ -6784,8 +6807,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1809486743}
 --- !u!1 &1809627172
@@ -7173,8 +7198,10 @@ MonoBehaviour:
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
+  _vaisseau: []
   _speed: 10
   _imageName: 
+  _gameManager: {fileID: 0}
   _isDragging: 0
   _image: {fileID: 1876248269}
 --- !u!1 &1889211085
