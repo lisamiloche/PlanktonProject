@@ -1,1 +1,17 @@
-12131
+Click_mouse >> quand le joueur fait clique "droit" ou clique "gauche"
+
+Merge_object >> quand le joueur merge un objet
+
+Vision_concentrate >> quand le joueur appuit sur la touche "V"
+
+Walk_alien >> Quand l'alien se déplace
+
+Objet_to_inventory >> Quand le joueur clique sur un objet qui va dans son inventaire
+
+Impossible_Merge_object_inventory >> Quand un joueur ne peut pas merge des objets / Quand un joueur ne peut pas drag n drop un objet
+
+Car >> son pendant la transition de la scene 3 à la scene 4
+
+Kitchen_timer >> son avant le dernier dialogue
+
+Music_wuwu >> musique scene 1, 2, 4, et 5
