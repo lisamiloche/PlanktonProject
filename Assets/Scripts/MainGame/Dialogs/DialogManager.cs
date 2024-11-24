@@ -11,8 +11,8 @@ public class DialogManager : MonoBehaviour
 {
     [Header("Références Obj")]
     [SerializeField] private Transform _player;
-    [SerializeField] private Transform _character;
-    [SerializeField] private Collider2D _charaCol;
+    [SerializeField] private GameObject _character;
+    private Collider2D _charaCol;
     [SerializeField] private GameObject _dialogBox;
     [SerializeField] private GameObject[] _dialogsList;
     [SerializeField] private Transform _camera;
@@ -20,7 +20,7 @@ public class DialogManager : MonoBehaviour
 
     [Header("Outline")]
     [SerializeField] private Material _material;
-    [SerializeField] private SpriteRenderer _sprRenderer;
+    private SpriteRenderer _sprRenderer;
     private Material _mat;
 
     [Header("Blur Effect")]
@@ -32,10 +32,10 @@ public class DialogManager : MonoBehaviour
     private Vector3 _finalSpot01;
     private Vector3 _finalSpot02;
     [SerializeField] private float _speed;
-    [SerializeField] private Dialog _dialog;
+    private Dialog _dialog;
     private bool _isLaunched = false;
     private bool _isFinished = false;
-    public bool _isInDialog = false;
+    [HideInInspector] public bool _isInDialog = false;
 
     private Vector3 _lastPosition;
     private Vector3 _playerPos;
@@ -43,17 +43,24 @@ public class DialogManager : MonoBehaviour
     private bool _isPlayerLeft = false;
     private Vector3 _playerScale;
     private Vector3 _characterScale;
+    private Transform _characterTrsfm;
     [SerializeField] private CameraManager[] _cameraManager;
+
 
     private void Start()
     {
-        _mat = _sprRenderer.material;
-        _dialogBox.SetActive(false);
-        _blur.SetActive(false);
         _dialog = GetComponent<Dialog>();
+        _characterTrsfm = _character.GetComponent<Transform>();
+        _charaCol = _character.GetComponent<Collider2D>();
+        _sprRenderer = _character.GetComponent<SpriteRenderer>();
+
+        _mat = _sprRenderer.material;        
         _lastPosition = _player.position;
         _playerScale = _player.localScale;
-        _characterScale = _character.localScale;
+        _characterScale = _characterTrsfm.localScale;
+
+        _dialogBox.SetActive(false);
+        _blur.SetActive(false);
     }
 
     private void Update()
@@ -75,13 +82,13 @@ public class DialogManager : MonoBehaviour
                         other.SetActive(false);
 
                     _playerPos = _player.position;
-                    _characterPos = _character.position;
+                    _characterPos = _characterTrsfm.position;
 
                     _isLaunched = true;
                     _isInDialog = true;
                     
 
-                    if(Vector2.Distance(_player.position, _transitionSpot01) < Vector2.Distance(_character.position, _transitionSpot01))
+                    if(Vector2.Distance(_player.position, _transitionSpot01) < Vector2.Distance(_characterTrsfm.position, _transitionSpot01))
                     {
                         Placement(_transitionSpot01, _transitionSpot02, true);
                     }
@@ -131,21 +138,21 @@ public class DialogManager : MonoBehaviour
     private void Placement(Vector3 spot01, Vector3 spot02, bool _isLeft)
     {
         _player.position = spot01; _player.localScale += new Vector3(2, 2, 2);
-        _character.position = spot02; _character.localScale += new Vector3(2, 2, 2);
+        _characterTrsfm.position = spot02; _characterTrsfm.localScale += new Vector3(2, 2, 2);
         _isPlayerLeft = _isLeft;
     }
 
     private void GetBack(Vector2 spot01, Vector2 spot2)
     {
         _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
-        _character.position = Vector3.MoveTowards(_character.position, spot2, _speed * Time.deltaTime);
+        _characterTrsfm.position = Vector3.MoveTowards(_characterTrsfm.position, spot2, _speed * Time.deltaTime);
     }
 
     private void Finished()
     {
         _blur.SetActive(false);
         _player.position = _playerPos; _player.localScale = _playerScale;
-        _character.position = _characterPos; _character.localScale = _characterScale;
+        _characterTrsfm.position = _characterPos; _characterTrsfm.localScale = _characterScale;
         _isFinished = true;
         _isInDialog = false;
     }
@@ -164,10 +171,10 @@ public class DialogManager : MonoBehaviour
 
     private void DirectionAndLaunch(Vector3 spot01, Vector3 spot02)
     {
-        if (_player.position != spot01 || _character.position != spot02)
+        if (_player.position != spot01 || _characterTrsfm.position != spot02)
         {
             _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
-            _character.position = Vector3.MoveTowards(_character.position, spot02, _speed * Time.deltaTime);
+            _characterTrsfm.position = Vector3.MoveTowards(_characterTrsfm.position, spot02, _speed * Time.deltaTime);
         }
         else
         {
@@ -183,9 +190,9 @@ public class DialogManager : MonoBehaviour
             else if (_dialog.TextNameCharacter.text == _character.name)
             {
                 if(_isPlayerLeft)
-                    _dialogBox.transform.position = new Vector2(_character.position.x-2, _character.position.y+0.5f);
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x-2, _characterTrsfm.position.y+0.5f);
                 else
-                    _dialogBox.transform.position = new Vector2(_character.position.x+2, _character.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x+2, _characterTrsfm.position.y + 0.5f);
             }
         }  
     }
@@ -198,7 +205,7 @@ public class DialogManager : MonoBehaviour
         else
             GetBack(_transitionSpot02, _transitionSpot01);
 
-        if ((_player.position == _transitionSpot02 && _character.position == _transitionSpot01) || (_player.position == _transitionSpot01 && _character.position == _transitionSpot02))
+        if ((_player.position == _transitionSpot02 && _characterTrsfm.position == _transitionSpot01) || (_player.position == _transitionSpot01 && _characterTrsfm.position == _transitionSpot02))
             Finished(); 
     }
 }
