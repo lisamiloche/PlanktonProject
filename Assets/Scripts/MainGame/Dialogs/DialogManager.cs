@@ -137,8 +137,20 @@ public class DialogManager : MonoBehaviour
 
     private void Placement(Vector3 spot01, Vector3 spot02, bool _isLeft)
     {
-        _player.position = spot01; _player.localScale += new Vector3(2, 2, 2);
-        _characterTrsfm.position = spot02; _characterTrsfm.localScale += new Vector3(2, 2, 2);
+        _player.position = spot01;
+        _characterTrsfm.position = spot02;
+
+        if (_player.position.x < _characterTrsfm.position.x)
+        {
+            _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
+            _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la gauche
+        }
+        else
+        {
+            _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la gauche
+            _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
+        }
+
         _isPlayerLeft = _isLeft;
     }
 
@@ -175,37 +187,92 @@ public class DialogManager : MonoBehaviour
         {
             _player.position = Vector3.MoveTowards(_player.position, spot01, _speed * Time.deltaTime);
             _characterTrsfm.position = Vector3.MoveTowards(_characterTrsfm.position, spot02, _speed * Time.deltaTime);
+            if (_player.position.x < _characterTrsfm.position.x)
+            {
+                _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
+                _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la gauche
+            }
+            else
+            {
+                _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la gauche
+                _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
+            }
         }
         else
         {
             _dialogBox.SetActive(true);
-
             if (_dialog.TextNameCharacter.text == _player.name)
-            { //Si nécessaire possibilité de scale -1 pour retourner la box si jamais il y a un sens particulier
-                if(_isPlayerLeft)
-                    _dialogBox.transform.position = new Vector2(_player.position.x+2, _player.position.y+0.5f);
+            {
+                if (_isPlayerLeft)
+                    _dialogBox.transform.position = new Vector2(_player.position.x + 2, _player.position.y + 0.5f);
                 else
-                    _dialogBox.transform.position = new Vector2(_player.position.x-2, _player.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_player.position.x - 2, _player.position.y + 0.5f);
             }
             else if (_dialog.TextNameCharacter.text == _character.name)
             {
-                if(_isPlayerLeft)
-                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x-2, _characterTrsfm.position.y+0.5f);
+                if (_isPlayerLeft)
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x - 2, _characterTrsfm.position.y + 0.5f);
                 else
-                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x+2, _characterTrsfm.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x + 2, _characterTrsfm.position.y + 0.5f);
             }
-        }  
+        }
+
     }
 
     void AnimationReturn()
     {
-        _dialogBox.SetActive(false);
+        /*_dialogBox.SetActive(false);
         if(_isPlayerLeft)
             GetBack(_transitionSpot01, _transitionSpot02);
         else
             GetBack(_transitionSpot02, _transitionSpot01);
 
         if ((_player.position == _transitionSpot02 && _characterTrsfm.position == _transitionSpot01) || (_player.position == _transitionSpot01 && _characterTrsfm.position == _transitionSpot02))
-            Finished(); 
+            Finished(); */
+
+        _dialogBox.SetActive(false);
+
+        // Calculer la direction de retour pour le joueur et l'autre personnage
+        if (_isPlayerLeft)
+        {
+            GetBack(_transitionSpot01, _transitionSpot02);
+
+            // Réajuster l'orientation lors du retour
+            if (_player.position.x < _characterTrsfm.position.x)
+            {
+                _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
+                _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la gauche
+            }
+            else
+            {
+                _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la gauche
+                _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
+            }
+        }
+        else
+        {
+            GetBack(_transitionSpot02, _transitionSpot01);
+
+            // Réajuster l'orientation lors du retour
+            if (_player.position.x < _characterTrsfm.position.x)
+            {
+                _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
+                _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la gauche
+            }
+            else
+            {
+                _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la gauche
+                _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
+            }
+        }
+
+        // Vérifie si les personnages sont à leurs positions de départ
+        if ((_player.position == _transitionSpot02 && _characterTrsfm.position == _transitionSpot01) ||
+            (_player.position == _transitionSpot01 && _characterTrsfm.position == _transitionSpot02))
+        {
+            Finished();
+        }
     }
+
+
 }

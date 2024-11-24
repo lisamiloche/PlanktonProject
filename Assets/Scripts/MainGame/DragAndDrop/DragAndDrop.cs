@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using static UnityEditor.Progress;
 using UnityEditor.Rendering;
+using UnityEngine.SceneManagement;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -77,6 +78,8 @@ public class DragAndDrop : MonoBehaviour
         _mergeObjects.IsOccupied = false;
         _mergeObjects.Image.sprite = null;
         Inventory.Instance.ItemInInventory--;
+
+        //ici code pour sortir de la scène
     }
 
     private void GetMousePosition()
