@@ -8273,7 +8273,7 @@ PrefabInstance:
       objectReference: {fileID: 394038237}
     - target: {fileID: 2955885926037144248, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: XIGURG
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
