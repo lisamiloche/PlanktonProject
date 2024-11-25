@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: (C'est qui cet homme ?)
+  TextDialog: ' C''est normal, Urika. Il te voulait quoi, ce monsieur ?'
   TextNameCharacter: XIGURG
   TextButton: Suivant
 --- !u!1 &244819990
@@ -2586,6 +2586,7 @@ MonoBehaviour:
   - {fileID: 1390768875}
   - {fileID: 1010247814}
   - {fileID: 1110212815}
+  - {fileID: 1748700286}
   InProgress: 1
 --- !u!4 &794453814
 Transform:
@@ -3783,8 +3784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: (Quoi ? Il ose la pousser !)
-  TextNameCharacter: XIGURG
+  TextDialog: "Tu sais, mes origines de Native Am\xE9ricaine n'aident pas. C'est
+    juste de la b\xEAtise."
+  TextNameCharacter: URIKA
   TextButton: Suivant
 --- !u!4 &1010247815
 Transform:
@@ -4373,9 +4375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Mais regardez-moi \xE7a, la sorci\xE8re a un nouveau petit toutou.
-    Il est horrible, ahah !"
-  TextNameCharacter: INCONNU
+  TextDialog: Merci beaucoup, Xigurg.
+  TextNameCharacter: URIKA
   TextButton: Suivant
 --- !u!1 &1110212814
 GameObject:
@@ -4406,10 +4407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: (La pauvre, elle a perdu tous ses bijoux... Je dois vite les retrouver
-    !)
+  TextDialog: "Je suis d\xE9sol\xE9, Urika."
   TextNameCharacter: XIGURG
-  TextButton: Fin
+  TextButton: Suivant
 --- !u!4 &1110212816
 Transform:
   m_ObjectHideFlags: 0
@@ -5622,9 +5622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Il a un petit costume en plus, comme c'est mignon. Allez, pousse-toi
-    de l\xE0, la vieille."
-  TextNameCharacter: INCONNU
+  TextDialog: "Laisse tomber, c'est juste du racisme de bas \xE9tage."
+  TextNameCharacter: URIKA
   TextButton: Suivant
 --- !u!4 &1390768876
 Transform:
@@ -7086,6 +7085,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729487281}
   m_CullTransparentMesh: 1
+--- !u!1 &1748700284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748700285}
+  - component: {fileID: 1748700286}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1748700285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748700284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1748700286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748700284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Ce n'est rien, Xigurg. Allez, on rentre \xE0 la maison."
+  TextNameCharacter: URIKA
+  TextButton: FIN
 --- !u!1 &1797770149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,6 +8252,7 @@ Transform:
   - {fileID: 1390768876}
   - {fileID: 1010247815}
   - {fileID: 1110212816}
+  - {fileID: 1748700285}
   - {fileID: 794453814}
   m_Father: {fileID: 1868959634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
