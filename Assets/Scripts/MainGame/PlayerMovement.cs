@@ -2,16 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public static PlayerMovement Instance;
+
+
     [SerializeField] private float _speed;
     private Vector3 _targetPosition;
     private bool _isMoving = false;
     [SerializeField] private Collider2D _floorCollider;
     [SerializeField] private TriggerZoneDialog[] _zoneDialog;
-    [SerializeField] private Animator _anim;
+    public Animator Anim;
+
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("STOOOOOOOOOOOOOOOOOOOOP");
+            return;
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -57,14 +76,14 @@ public class PlayerMovement : MonoBehaviour
                     if (!trigger._isTrigger)
                     {
                         transform.position = Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _speed);
-                        _anim.SetBool("Iswalking", true);
+                        Anim.SetBool("Iswalking", true);
                     }
                 }
             }
             else if (transform.position == _targetPosition)
             {
                 _isMoving = false;
-                _anim.SetBool("Iswalking", false);
+                Anim.SetBool("Iswalking", false);
             }
         }
     }

@@ -23,6 +23,7 @@ public class TriggerDialogs : MonoBehaviour
         {
             _dialogBox.SetActive(true);
             _blur.SetActive(true);
+            PlayerMovement.Instance.Anim.SetBool("Iswalking", false);
         }
         else
         {
