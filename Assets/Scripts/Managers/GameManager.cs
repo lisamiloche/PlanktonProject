@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject SettingsCanvas;
     public GameObject Pause;
     public GameObject Player;
+    public Image Fade;
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool _needObjToChangeScene;
     [SerializeField] private bool _needDialogToChangeScene;
     [SerializeField] private Dialog _dialog;
-
+    [SerializeField] private string _sceneSuivante;
 
     private void Awake()
     {
@@ -37,6 +39,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         _grain.SetActive(false);
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        Fade.enabled = false;
     }
 
     // Update is called once per frame
@@ -64,32 +72,38 @@ public class GameManager : MonoBehaviour
                 {
                     if(!_dialog.InProgress)
                     {
-                        Debug.Log("Changement de scène");
+                        StartCoroutine(FadingBetweenScene());
                     }
                     else
                     Debug.Log("Besoin de dialog fini");
                 }
                 else
                 {
-                    Debug.Log("Changement de scène");
+                    StartCoroutine(FadingBetweenScene());
                 }                
-                //fade + changement de scène
+                //Ajouter un fade
             }
         }
         else if (_needDialogToChangeScene)
         {
             if (!_dialog.InProgress)
             {
-                Debug.Log("Changement de scène");
+                StartCoroutine(FadingBetweenScene());
             }
             else
                 Debug.Log("Besoin de dialog fini");
         }
         else{
-            Debug.Log("Pas besoin d'objet spécifique");
-            // voir comment on change de scène
+            Debug.Log("Management de la scène anormal");
         }
         
+    }
+    IEnumerator FadingBetweenScene()
+    {
+        Fade.enabled = true;
+        Fade.DOFade(1f, 2f);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(_sceneSuivante);
     }
 
     public void Resume()
