@@ -289,8 +289,12 @@ MonoBehaviour:
   musicSource: {fileID: 207917746}
   sfxSource: {fileID: 207917745}
   musicClips:
+  - {fileID: 8300000, guid: 4769b21b606ef1e4e94900ad2d1be0fc, type: 3}
   - {fileID: 8300000, guid: 3e737d5b602c4c34e891b969f7464b34, type: 3}
+  - {fileID: 8300000, guid: 452b820588447294587b9d1267834b13, type: 3}
+  - {fileID: 8300000, guid: 53f7466afcaca884ea4137aeeca3b99f, type: 3}
   sfxClips:
+  - {fileID: 8300000, guid: e45030492b401314c8fcc5d033dc3398, type: 3}
   - {fileID: 8300000, guid: ed877effb2acf2740b9d1c2d054d1dc9, type: 3}
   - {fileID: 8300000, guid: 743bbc0227991534f8411b2c8d8471e6, type: 3}
   - {fileID: 8300000, guid: e74ce3b5295a16941b6ccca866cfbd5c, type: 3}
@@ -1512,6 +1516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fade: {fileID: 1906652906}
+  _audioManager: {fileID: 207917742}
   Settings: {fileID: 1107224437}
   Credits: {fileID: 1797352830}
 --- !u!4 &1143651115

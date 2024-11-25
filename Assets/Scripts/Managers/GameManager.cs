@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,14 @@ public class GameManager : MonoBehaviour
     
     public GameObject MGlass;
     public SpriteMask MaskingGlass;
-    [SerializeField] private GameObject _grain;
+    [SerializeField] private GameObject _grain;    
     public Camera MainCam;
+    private int index;
     public GameObject SettingsCanvas;
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;
+    [SerializeField] private GameObject _audioManager;
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -45,6 +48,16 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         StartCoroutine(FadingStart());
+
+        index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("index : " + index);
+
+        if (index == 2 || index == 3 || index == 5 || index == 6)
+            _audioManager.GetComponent<AudioManager>().PlayMusic(1, true);
+        else if (index == 4 || index == 9 || index == 10)
+            _audioManager.GetComponent<AudioManager>().PlayMusic(2, true);
+        else if (index == 7 || index == 8)
+            _audioManager.GetComponent<AudioManager>().PlayMusic(3, true);
     }
 
     // Update is called once per frame
