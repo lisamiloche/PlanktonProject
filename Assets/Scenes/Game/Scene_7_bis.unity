@@ -4751,9 +4751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: On ne sait jamais...
+  TextDialog: "Il faut que je trouve une recette aussi. J'en ai vu une la premi\xE8re
+    fois que je suis venu ici.  "
   TextNameCharacter: XIGURG
-  TextButton: Suivant
+  TextButton: Fin
 --- !u!1 &1204865365
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1248298851
 Transform:
   m_ObjectHideFlags: 0
@@ -5224,8 +5225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Il faut que je trouve quelque chose \xE0 lancer sur la porte et une
-    arme."
+  TextDialog: "Je pense pouvoir me d\xE9brouiller avec les ingr\xE9dients dans la
+    cuisine."
   TextNameCharacter: XIGURG
   TextButton: Suivant
 --- !u!4 &1276291368
@@ -5872,7 +5873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Il y a l'air d'avoir quelqu'un \xE0 l'int\xE9rieur."
+  TextDialog: "Je vais faire un g\xE2teau pour Urika, \xE7a devrait lui faire plaisir."
   TextNameCharacter: XIGURG
   TextButton: Suivant
 --- !u!4 &1507947987
@@ -6982,7 +6983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1797770150
 RectTransform:
   m_ObjectHideFlags: 0
