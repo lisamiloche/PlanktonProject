@@ -12,6 +12,14 @@ Impossible_Merge_object_inventory >> Quand un joueur ne peut pas merge des objet
 
 Car >> son pendant la transition de la scene 3 à la scene 4
 
-Kitchen_timer >> son avant le dernier dialogue
+Kitchen_timer >> son juste avant le dernier dialogue
 
-Music_wuwu >> musique scene 1, 2, 4, et 5
+Music_wuwu >> musique scene 1, 2, 4, et 5 (en loop)
+
+Music_ind >> scene 3 et 7 (en loop)
+
+Diner >> scene 6 (en loop)
+
+Music_Menu >> dans le main menu (en loop)
+
+Broke >> pour l'énigme 5 après avoir drag n drop les 3 boulons (son vaisseau qui demarre pas)
