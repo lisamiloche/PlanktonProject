@@ -43,6 +43,7 @@ public class Dialog : MonoBehaviour
     public void OnClickNextDialog()
     {
         _sequenceNumber++;
+        AudioManager.Instance.PlaySFX(2);
         if (_sequenceNumber <= Dialogs.Length-1)
         {
             StartCoroutine(UpdateDialog(Dialogs[_sequenceNumber]));

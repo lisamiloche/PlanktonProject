@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && transform.position == _targetPosition)
         {
+            AudioManager.Instance.PlaySFX(2);
             foreach (TriggerZoneDialog trigger in _zoneDialog)
             {
                 if (!trigger._isTrigger)
@@ -60,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
                         {
                             transform.localScale = Vector3.one;
                         }
-
                         _isMoving = true;
                     }
                 }
@@ -77,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         transform.position = Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _speed);
                         Anim.SetBool("Iswalking", true);
+                        AudioManager.Instance.PlaySFX(8);
                     }
                 }
             }

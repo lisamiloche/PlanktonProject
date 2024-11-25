@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using static UnityEditor.Progress;
 using UnityEditor.Rendering;
 using UnityEngine.SceneManagement;
+using System;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -85,8 +86,6 @@ public class DragAndDrop : MonoBehaviour
         _mergeObjects.IsOccupied = false;
         _mergeObjects.Image.sprite = null;
         Inventory.Instance.ItemInInventory--;
-
-
         _gameManager._nbOfObjDropped++;
     }
 
@@ -244,6 +243,7 @@ public class DragAndDrop : MonoBehaviour
         if (new Vector2(_instance.transform.position.x, _instance.transform.position.y) == new Vector2(_dragPosition.x, _dragPosition.y))      
         {
             Debug.Log("Je suis là");
+            AudioManager.Instance.PlaySFX(6);
             Destroy(_instance);
             _stopDrag = false; _isDragging = false; _mergeObjects._drag = false;
         }

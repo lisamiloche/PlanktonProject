@@ -61,12 +61,14 @@ public class Inventory : MonoBehaviour
             if (toCheck != ItemToMerge[i].type.ToString())
             {
                 Debug.Log("You can't merge, sorry.");
+                AudioManager.Instance.PlaySFX(3);
                 break;
             }
             if (i == ItemToMerge.Count-1)
             {
                 foreach (var item in ItemToMerge)
                 {
+                    AudioManager.Instance.PlaySFX(5);
                     item.Image.sprite = null;
                     item.Outline.enabled = false;
                     item.IsOccupied = false;

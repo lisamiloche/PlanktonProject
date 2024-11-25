@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,7 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
         {
             if (Input.GetMouseButtonDown(1) && Image.sprite != null)
             {
+                AudioManager.Instance.PlaySFX(2);
                 if (Outline.enabled)
                 {
                     Outline.enabled = false;
@@ -54,6 +56,7 @@ public class MergeObjects : TypesManager, IPointerEnterHandler, IPointerExitHand
 
             if (Input.GetMouseButton(0) && Image.sprite != null) // AJOUT LISA
             {
+                AudioManager.Instance.PlaySFX(2);
                 _drag = true;
             }
         }

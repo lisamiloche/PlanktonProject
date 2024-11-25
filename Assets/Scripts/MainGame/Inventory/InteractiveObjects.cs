@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -36,6 +37,7 @@ public class InteractiveObjects : TypesManager
 
         if(Input.GetMouseButtonDown(1))
         {
+            AudioManager.Instance.PlaySFX(2);
             if (hit.collider == Collider)
             {
                 OnClick();
@@ -72,6 +74,7 @@ public class InteractiveObjects : TypesManager
                 item.type = type;
                 item.Image.sprite = Image;
                 item.IsOccupied = true;
+                AudioManager.Instance.PlaySFX(6);
                 break;
             }
         }

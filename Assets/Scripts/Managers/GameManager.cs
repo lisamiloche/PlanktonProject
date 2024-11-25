@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
+            AudioManager.Instance.PlaySFX(7);
             if (MGlass.activeSelf) { MGlass.SetActive(false); _grain.SetActive(false); }
             else { MGlass.SetActive(true); _grain.SetActive(true); }
         }
