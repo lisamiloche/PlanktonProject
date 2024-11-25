@@ -15,6 +15,7 @@ public class TypesManager : MonoBehaviour
         AffairesPerdues,
         Compo01,
         Compo02,
+        Ferraille,
         Autres
     }
     public Types type;

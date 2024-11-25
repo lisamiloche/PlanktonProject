@@ -15,6 +15,7 @@ public class ListImageMerge
         AffairesPerdues,
         Compo01,
         Compo02,
+        Ferraille,
         Autres
     }
     public Types type;
