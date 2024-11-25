@@ -424,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5569291718953274447, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8423933442681669935, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
@@ -903,11 +903,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 260098412}
+  _isDragging: 0
 --- !u!114 &269807872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,11 +1840,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 458377088}
+  _isDragging: 0
 --- !u!1001 &476912114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1965,7 +1975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1928429955442008756, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
       propertyPath: m_Name
@@ -2185,11 +2195,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 596311860}
+  _isDragging: 0
 --- !u!1 &628935127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3204484811597151405, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5662365949329029400, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
@@ -2792,11 +2807,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 828403419}
+  _isDragging: 0
 --- !u!1 &829078106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,6 +3323,81 @@ Transform:
   - {fileID: 36109741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &932238025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932238028}
+  - component: {fileID: 932238027}
+  - component: {fileID: 932238026}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &932238026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932238025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &932238027
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932238025}
+  m_CullTransparentMesh: 1
+--- !u!224 &932238028
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932238025}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1685570423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &941097349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,11 +4190,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1058425331}
+  _isDragging: 0
 --- !u!1 &1066360590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4444,11 +4544,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1137111764}
+  _isDragging: 0
 --- !u!1 &1138063955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,7 +4889,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e354c86e4aa14f34487ab73298fa0a4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5020,11 +5125,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1252402531}
+  _isDragging: 0
 --- !u!1 &1252596486
 GameObject:
   m_ObjectHideFlags: 0
@@ -5057,9 +5167,11 @@ MonoBehaviour:
   MGlass: {fileID: 1504653400}
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 1891758214}
+  MainCam: {fileID: 1138063957}
   SettingsCanvas: {fileID: 0}
   Pause: {fileID: 0}
   Player: {fileID: 1965426397}
+  Fade: {fileID: 932238026}
   HidenObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -5067,6 +5179,9 @@ MonoBehaviour:
   _nbOfObjToDrop: 4
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
+  _needDialogToChangeScene: 0
+  _dialog: {fileID: 0}
+  _sceneSuivante: Scene_5
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5307,11 +5422,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1309835898}
+  _isDragging: 0
 --- !u!1 &1353449796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,11 +5609,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1353449800}
+  _isDragging: 0
 --- !u!1 &1486167581
 GameObject:
   m_ObjectHideFlags: 0
@@ -5812,7 +5937,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.04834743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5823,7 +5948,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.9033052}
   m_EdgeRadius: 0
 --- !u!4 &1531050194
 Transform:
@@ -6401,11 +6526,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1644748040}
+  _isDragging: 0
 --- !u!1 &1670881284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,6 +6700,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 829078107}
+  - {fileID: 932238028}
   - {fileID: 941097352}
   - {fileID: 723820596}
   m_Father: {fileID: 0}
@@ -7010,11 +7141,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1809486743}
+  _isDragging: 0
 --- !u!1 &1809627172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7405,11 +7541,16 @@ MonoBehaviour:
   - {fileID: 1101735246680406416, guid: 911218b3cb960b840adc6a7161ded0a4, type: 3}
   - {fileID: 8578664437917119276, guid: 508b45d94e2c13a47a4a1543add8a11e, type: 3}
   - {fileID: 157266720705489493, guid: add8b1ca5013bea42bbde5761ae3b86f, type: 3}
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
+  _ferraille: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1876248269}
+  _isDragging: 0
 --- !u!1 &1889211085
 GameObject:
   m_ObjectHideFlags: 0
