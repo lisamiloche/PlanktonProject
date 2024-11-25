@@ -2596,11 +2596,11 @@ Transform:
   m_GameObject: {fileID: 794453812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.475779, y: 1.000803, z: -0.025686834}
+  m_LocalPosition: {x: -2.9595902, y: 1.4937544, z: 0.008487083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1110212816}
+  m_Father: {fileID: 2007086840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &794453815
 MonoBehaviour:
@@ -2646,7 +2646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &814137280
 Transform:
   m_ObjectHideFlags: 0
@@ -4422,8 +4422,7 @@ Transform:
   m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 794453814}
+  m_Children: []
   m_Father: {fileID: 2007086840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137111760
@@ -5151,12 +5150,12 @@ MonoBehaviour:
   - {fileID: 497624320}
   - {fileID: 658969571}
   - {fileID: 1549730434}
-  _nbOfObjToDrop: 0
+  _nbOfObjToDrop: 4
   _nbOfObjDropped: 0
-  _needObjToChangeScene: 0
+  _needObjToChangeScene: 1
   _needDialogToChangeScene: 1
-  _dialog: {fileID: 794453813}
-  _sceneSuivante: Scene_6_bis
+  _dialog: {fileID: 1810587509}
+  _sceneSuivante: Scene_7
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5165,12 +5164,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252596486}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7463002, y: -2.403833, z: 0.080688365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.028663225, y: 0.6836306, z: 0.05117898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1855044079}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276291366
 GameObject:
@@ -7530,7 +7529,6 @@ Transform:
   m_Children:
   - {fileID: 1868959634}
   - {fileID: 1248298851}
-  - {fileID: 1252596488}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868959633
@@ -8208,6 +8206,7 @@ Transform:
   - {fileID: 1390768876}
   - {fileID: 1010247815}
   - {fileID: 1110212816}
+  - {fileID: 794453814}
   m_Father: {fileID: 1868959634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2025993164
@@ -9411,3 +9410,4 @@ SceneRoots:
   - {fileID: 1504653401}
   - {fileID: 120574213}
   - {fileID: 1855044079}
+  - {fileID: 1252596488}
