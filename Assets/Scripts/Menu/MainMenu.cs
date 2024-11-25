@@ -9,7 +9,6 @@ using DG.Tweening;
 public class MainMenu : MonoBehaviour
 {
     public Image Fade;
-    [SerializeField] private GameObject _audioManager;
     public GameObject Settings;
     public GameObject Credits;
     int index;
@@ -18,7 +17,7 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         StartCoroutine(FadingStart());
-        _audioManager.GetComponent<AudioManager>().PlayMusic(0, true);        
+        AudioManager.Instance.PlayMusic(0, true);
     }
     public void ButtonPlay()
     {
@@ -70,7 +69,7 @@ public class MainMenu : MonoBehaviour
         Fade.DOFade(1, 2);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(1);
-        _audioManager.GetComponent<AudioManager>().StopMusic();
+        AudioManager.Instance.StopMusic();
     }
 
     IEnumerator FadingQuit()
