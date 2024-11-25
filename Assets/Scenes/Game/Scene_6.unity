@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_text: 'text dialog .. text dialog .. text dialog .. text dialog .. text dialog
     .. text dialog .. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5040beacc618187468aa7b40bb0f4cc4, type: 2}
+  m_sharedMaterial: {fileID: 674604543766961134, guid: 5040beacc618187468aa7b40bb0f4cc4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6359,8 +6359,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74896db5ab8be00438a250244abc872f, type: 2}
+  m_sharedMaterial: {fileID: -718836968371040363, guid: 74896db5ab8be00438a250244abc872f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6777,8 +6777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Suivant
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74896db5ab8be00438a250244abc872f, type: 2}
+  m_sharedMaterial: {fileID: -718836968371040363, guid: 74896db5ab8be00438a250244abc872f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7104,7 +7104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1797770150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7369,7 +7369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1809627173
 RectTransform:
   m_ObjectHideFlags: 0

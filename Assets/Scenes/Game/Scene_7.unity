@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &120862203
 Transform:
   m_ObjectHideFlags: 0
@@ -511,9 +511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Hum le caca c'est d\xE9licieux.... TROP TROP DELICIEUX"
-  TextNameCharacter: Character
-  TextButton: END
+  TextDialog: "C'est normal, Urika. Tu m'as accueilli chez toi, tu m'as aid\xE9 tout
+    de suite, sans te soucier de mon apparence."
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
 --- !u!1 &244819990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2012,102 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+--- !u!1 &480548141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480548143}
+  - component: {fileID: 480548142}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &480548142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480548141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Je serai tr\xE8s heureuse si tu restes quelque temps. On regardera
+    pour r\xE9essayer de r\xE9parer ton vaisseau."
+  TextNameCharacter: URIKA
+  TextButton: Suivant
+--- !u!4 &480548143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480548141}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &498966498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498966499}
+  - component: {fileID: 498966500}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498966499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498966498}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &498966500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498966498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Xigurg, tu peux rester ici aussi longtemps que tu le souhaites. Notre
+    amiti\xE9 ne peut que grandir"
+  TextNameCharacter: URIKA
+  TextButton: Suivant
 --- !u!1 &527722423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2566,11 @@ MonoBehaviour:
   Dialogs:
   - {fileID: 1068699387}
   - {fileID: 195242381}
+  - {fileID: 2046944183}
+  - {fileID: 498966500}
+  - {fileID: 480548142}
+  - {fileID: 1641241143}
+  - {fileID: 1682443843}
   InProgress: 1
 --- !u!4 &794453814
 Transform:
@@ -4309,9 +4411,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Hum le caca c'est d\xE9licieux"
-  TextNameCharacter: Player
-  TextButton: NEXT
+  TextDialog: "Ohh, un g\xE2teau ! C'est adorable, Xigurg. On n'a jamais fait \xE7a
+    pour moi."
+  TextNameCharacter: URIKA
+  TextButton: Suivant
 --- !u!1 &1137111760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,7 +4981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1248298851
 Transform:
   m_ObjectHideFlags: 0
@@ -6304,6 +6407,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440549295}
   m_CullTransparentMesh: 1
+--- !u!1 &1641241142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641241144}
+  - component: {fileID: 1641241143}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1641241143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641241142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Merci, Urika. Je pense rester encore un peu avec toi. Tu me montreras
+    des trucs d'humains, comme \xE7a."
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
+--- !u!4 &1641241144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641241142}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1644748036
 GameObject:
   m_ObjectHideFlags: 0
@@ -6627,6 +6778,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1682443842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682443844}
+  - component: {fileID: 1682443843}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1682443843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682443842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: Ahah, oui, avec plaisir, Xigurg.
+  TextNameCharacter: URIKA
+  TextButton: Fin
+--- !u!4 &1682443844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682443842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685570422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,7 +7133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1797770150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7202,7 +7400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1809627173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7380,7 +7578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1868959634
 Transform:
   m_ObjectHideFlags: 0
@@ -8227,6 +8425,11 @@ Transform:
   m_Children:
   - {fileID: 1068699386}
   - {fileID: 195242380}
+  - {fileID: 2046944182}
+  - {fileID: 498966499}
+  - {fileID: 480548143}
+  - {fileID: 1641241144}
+  - {fileID: 1682443844}
   - {fileID: 794453814}
   m_Father: {fileID: 1868959634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8384,6 +8587,53 @@ Transform:
   - {fileID: 1152455797}
   m_Father: {fileID: 413622835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2046944181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046944182}
+  - component: {fileID: 2046944183}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2046944182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046944181}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2046944183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046944181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Je te serai \xE0 jamais reconnaissant."
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
 --- !u!1 &2147204787
 GameObject:
   m_ObjectHideFlags: 0
