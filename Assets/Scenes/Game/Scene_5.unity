@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &120862203
 Transform:
   m_ObjectHideFlags: 0
@@ -511,9 +511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Hum le caca c'est d\xE9licieux.... TROP TROP DELICIEUX"
-  TextNameCharacter: Character
-  TextButton: END
+  TextDialog: "Je suis vraiment d\xE9sol\xE9e, Xigurg. Ne t'en fais pas, tu peux
+    rester avec moi le temps qu'on trouve une solution."
+  TextNameCharacter: URIKA
+  TextButton: Suivant
 --- !u!1 &244819990
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +928,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &313726024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313726025}
+  - component: {fileID: 313726026}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &313726025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313726024}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313726026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313726024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: Super ! Allez, on y va, Xigurg. Cela va te remonter le moral.
+  TextNameCharacter: URIKA
+  TextButton: Fin
 --- !u!1 &314716455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,8 +1239,8 @@ MonoBehaviour:
   m_text: 'text dialog .. text dialog .. text dialog .. text dialog .. text dialog
     .. text dialog .. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5040beacc618187468aa7b40bb0f4cc4, type: 2}
+  m_sharedMaterial: {fileID: 674604543766961134, guid: 5040beacc618187468aa7b40bb0f4cc4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1835,6 +1883,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &569333244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569333245}
+  - component: {fileID: 569333246}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569333245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569333244}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569333246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569333244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Tu vas voir, c'est un chouette endroit, convivial, o\xF9 on peut boire
+    et manger."
+  TextNameCharacter: URIKA
+  TextButton: Suivant
 --- !u!1 &596311856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2285,53 @@ Transform:
   - {fileID: 2025993165}
   m_Father: {fileID: 1685570423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &737416413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737416414}
+  - component: {fileID: 737416415}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737416414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737416413}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737416415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737416413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: C'est quoi, un diner, Urika ?
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
 --- !u!1 &738671193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2490,12 @@ MonoBehaviour:
   Dialogs:
   - {fileID: 1068699387}
   - {fileID: 195242381}
+  - {fileID: 1874257360}
+  - {fileID: 737416415}
+  - {fileID: 569333246}
+  - {fileID: 1088217644}
+  - {fileID: 1893108257}
+  - {fileID: 313726026}
   InProgress: 1
 --- !u!4 &794453814
 Transform:
@@ -2376,7 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
-  _character: {fileID: 319432618}
+  _character: {fileID: 1214023584}
   _dialogBox: {fileID: 1809627172}
   _dialogsList:
   - {fileID: 1486167581}
@@ -4084,9 +4233,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Hum le caca c'est d\xE9licieux"
-  TextNameCharacter: Player
-  TextButton: NEXT
+  TextDialog: "Mon vaisseau ne d\xE9marre pas, je suis bloqu\xE9 ici. Je n'ai plus
+    aucun espoir de rentrer chez moi."
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
+--- !u!1 &1088217642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088217643}
+  - component: {fileID: 1088217644}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1088217643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088217642}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1088217644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088217642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "Ah oui, des personnes ont vu mon vaisseau quand je me suis \xE9cras\xE9."
+  TextNameCharacter: XIGURG
+  TextButton: END
 --- !u!1 &1137111760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,6 +4748,126 @@ MonoBehaviour:
   m_Spacing: {x: 50, y: 30}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!1 &1214023584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214023587}
+  - component: {fileID: 1214023586}
+  - component: {fileID: 1214023585}
+  m_Layer: 0
+  m_Name: URIKA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1214023585
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214023584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &1214023586
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214023584}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: f5efe0d82f3f8c44282758f78d3a1cbc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1214023587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214023584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.69, y: -0.95, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248298850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4566,7 +4883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1248298851
 Transform:
   m_ObjectHideFlags: 0
@@ -6062,8 +6379,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74896db5ab8be00438a250244abc872f, type: 2}
+  m_sharedMaterial: {fileID: -718836968371040363, guid: 74896db5ab8be00438a250244abc872f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6479,8 +6796,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Suivant
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74896db5ab8be00438a250244abc872f, type: 2}
+  m_sharedMaterial: {fileID: -718836968371040363, guid: 74896db5ab8be00438a250244abc872f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6806,7 +7123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1797770150
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7070,7 +7387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1809627173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7248,7 +7565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1868959634
 Transform:
   m_ObjectHideFlags: 0
@@ -7266,6 +7583,54 @@ Transform:
   - {fileID: 120862203}
   m_Father: {fileID: 1855044079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1874257358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874257359}
+  - component: {fileID: 1874257360}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874257359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874257358}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874257360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874257358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "En attendant, je vais t'emmener au diner, \xE7a te changera les id\xE9es.
+    Il est juste \xE0 c\xF4t\xE9."
+  TextNameCharacter: URIKA
+  TextButton: Suivant
 --- !u!1 &1876248265
 GameObject:
   m_ObjectHideFlags: 0
@@ -7674,6 +8039,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 120574213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893108255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893108256}
+  - component: {fileID: 1893108257}
+  m_Layer: 0
+  m_Name: Dialog_Text_01.7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893108256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893108255}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48381114, y: 0.4929514, z: 0.034173917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007086840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893108257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893108255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDialog: "J'ai d\xFB activer son camouflage. Ils sont donc repartis, et je n'ai
+    pas \xE9veill\xE9 les soup\xE7ons. "
+  TextNameCharacter: XIGURG
+  TextButton: Suivant
 --- !u!1001 &1903989590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7904,6 +8317,12 @@ Transform:
   m_Children:
   - {fileID: 1068699386}
   - {fileID: 195242380}
+  - {fileID: 1874257359}
+  - {fileID: 737416414}
+  - {fileID: 569333245}
+  - {fileID: 1088217643}
+  - {fileID: 1893108256}
+  - {fileID: 313726025}
   - {fileID: 794453814}
   m_Father: {fileID: 1868959634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9024,6 +9443,7 @@ SceneRoots:
   - {fileID: 1964980395}
   - {fileID: 1557097205}
   - {fileID: 1325590949214942096}
+  - {fileID: 1214023587}
   - {fileID: 1066360593}
   - {fileID: 319432621}
   - {fileID: 931027267}
