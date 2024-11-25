@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private GameObject[] _dialogsList;
     [SerializeField] private Transform _camera;
     [SerializeField] private LayerMask _layerMask;
+    //[SerializeField] private 
 
     [Header("Outline")]
     [SerializeField] private Material _material;
@@ -76,6 +77,7 @@ public class DialogManager : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
+                    _character.layer = 6;
                     _blur.SetActive(true);
 
                     foreach (var other in _dialogsList)
@@ -167,6 +169,7 @@ public class DialogManager : MonoBehaviour
         _characterTrsfm.position = _characterPos; _characterTrsfm.localScale = _characterScale;
         _isFinished = true;
         _isInDialog = false;
+        _character.layer = 0;
     }
 
     void AnimationDialog()
@@ -221,23 +224,10 @@ public class DialogManager : MonoBehaviour
 
     void AnimationReturn()
     {
-        /*_dialogBox.SetActive(false);
-        if(_isPlayerLeft)
-            GetBack(_transitionSpot01, _transitionSpot02);
-        else
-            GetBack(_transitionSpot02, _transitionSpot01);
-
-        if ((_player.position == _transitionSpot02 && _characterTrsfm.position == _transitionSpot01) || (_player.position == _transitionSpot01 && _characterTrsfm.position == _transitionSpot02))
-            Finished(); */
-
         _dialogBox.SetActive(false);
-
-        // Calculer la direction de retour pour le joueur et l'autre personnage
         if (_isPlayerLeft)
         {
             GetBack(_transitionSpot01, _transitionSpot02);
-
-            // Réajuster l'orientation lors du retour
             if (_player.position.x < _characterTrsfm.position.x)
             {
                 _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
@@ -252,8 +242,6 @@ public class DialogManager : MonoBehaviour
         else
         {
             GetBack(_transitionSpot02, _transitionSpot01);
-
-            // Réajuster l'orientation lors du retour
             if (_player.position.x < _characterTrsfm.position.x)
             {
                 _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
@@ -265,8 +253,6 @@ public class DialogManager : MonoBehaviour
                 _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
             }
         }
-
-        // Vérifie si les personnages sont à leurs positions de départ
         if ((_player.position == _transitionSpot02 && _characterTrsfm.position == _transitionSpot01) ||
             (_player.position == _transitionSpot01 && _characterTrsfm.position == _transitionSpot02))
         {
