@@ -44,6 +44,7 @@ public class Inventory : MonoBehaviour
         if (NumberToMerge >= 2)
         {
             MergeButton.gameObject.SetActive(true);
+            MergeButton.gameObject.transform.position = new Vector3(GameManager.Instance.MainCam.transform.position.x, 0, 0);
         }
         if (NumberToMerge < 2)
         {
