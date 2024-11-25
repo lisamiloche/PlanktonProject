@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;
+    public bool CanDialog;
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -87,14 +88,35 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log(_nbOfObjDropped);
-        if(_needObjToChangeScene)
+        if (_needDialogToChangeScene && _needObjToChangeScene)
         {
+            CanDialog = false;
+            if (_nbOfObjDropped == _nbOfObjToDrop)
+            {
+                CanDialog = true;
+                if (index == 6)
+                {
+                    AudioManager.Instance.PlaySFX(0);
+                }
+                if (!_dialog.InProgress)
+                {
+                    if (index == 4)
+                        AudioManager.Instance.PlaySFX(1);
+                    StartCoroutine(FadingBetweenScene());
+                }
+            }
+        }
+        else if (_needObjToChangeScene)
+        {
+            CanDialog = true;
             if (_nbOfObjDropped == _nbOfObjToDrop)
             {
                 if(_needDialogToChangeScene)
                 {
                     if(!_dialog.InProgress)
                     {
+                        if(index == 4)
+                            AudioManager.Instance.PlaySFX(1);
                         StartCoroutine(FadingBetweenScene());
                     }
                     else
@@ -102,6 +124,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    if (index == 4)
+                        AudioManager.Instance.PlaySFX(1);
                     StartCoroutine(FadingBetweenScene());
                 }                
                 //Ajouter un fade
@@ -109,8 +133,11 @@ public class GameManager : MonoBehaviour
         }
         else if (_needDialogToChangeScene)
         {
+            CanDialog = true;
             if (!_dialog.InProgress)
             {
+                if (index == 4)
+                    AudioManager.Instance.PlaySFX(1);
                 StartCoroutine(FadingBetweenScene());
             }
             else

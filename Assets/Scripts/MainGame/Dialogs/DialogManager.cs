@@ -55,7 +55,7 @@ public class DialogManager : MonoBehaviour
         _charaCol = _character.GetComponent<Collider2D>();
         _sprRenderer = _character.GetComponent<SpriteRenderer>();
 
-        _mat = _sprRenderer.material;        
+        _mat = _sprRenderer.material;
         _lastPosition = _player.position;
         _playerScale = _player.localScale;
         _characterScale = _characterTrsfm.localScale;
@@ -68,44 +68,48 @@ public class DialogManager : MonoBehaviour
     {
         if (_isFinished == false) //Corriger ce truc moche
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, _layerMask);
-
-            if (hit.collider == _charaCol && !_isLaunched && _dialog.InProgress && Vector3.Distance(_player.position, _lastPosition) < 0.01f)
+            if (GameManager.Instance.CanDialog)
             {
-                _sprRenderer.material = _material;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, _layerMask);
 
-                if (Input.GetMouseButtonDown(1))
+                if (hit.collider == _charaCol && !_isLaunched && _dialog.InProgress && Vector3.Distance(_player.position, _lastPosition) < 0.01f)
                 {
-                    _character.layer = 6;
-                    _blur.SetActive(true);
+                    _sprRenderer.material = _material;
 
-                    foreach (var other in _dialogsList)
-                        other.SetActive(false);
-
-                    _playerPos = _player.position;
-                    _characterPos = _characterTrsfm.position;
-
-                    _isLaunched = true;
-                    _isInDialog = true;
-                    
-
-                    if(Vector2.Distance(_player.position, _transitionSpot01) < Vector2.Distance(_characterTrsfm.position, _transitionSpot01))
+                    if (Input.GetMouseButtonDown(1))
                     {
-                        Placement(_transitionSpot01, _transitionSpot02, true);
-                    }
-                    else
-                    {
-                        Placement(_transitionSpot02, _transitionSpot01, false);
+                        _character.layer = 6;
+                        _blur.SetActive(true);
+
+                        foreach (var other in _dialogsList)
+                            other.SetActive(false);
+
+                        _playerPos = _player.position;
+                        _characterPos = _characterTrsfm.position;
+
+                        _isLaunched = true;
+                        _isInDialog = true;
+
+
+                        if (Vector2.Distance(_player.position, _transitionSpot01) < Vector2.Distance(_characterTrsfm.position, _transitionSpot01))
+                        {
+                            Placement(_transitionSpot01, _transitionSpot02, true);
+                        }
+                        else
+                        {
+                            Placement(_transitionSpot02, _transitionSpot01, false);
+                        }
                     }
                 }
+                else
+                    _sprRenderer.material = _mat;
             }
-            else
-                _sprRenderer.material = _mat;
-                
+
+
 
             if (_isLaunched)
-            {                
+            {
                 AnimationDialog();
             }
 
@@ -125,7 +129,7 @@ public class DialogManager : MonoBehaviour
         }
         if (!_isInDialog)
         {
-            foreach(var camera in _cameraManager)
+            foreach (var camera in _cameraManager)
             {
                 camera._isMoving = true;
             }
