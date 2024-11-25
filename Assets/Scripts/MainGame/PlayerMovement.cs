@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && transform.position == _targetPosition)
         {
-            AudioManager.Instance.PlaySFX(2);
             foreach (TriggerZoneDialog trigger in _zoneDialog)
             {
                 if (!trigger._isTrigger)
@@ -70,15 +69,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isMoving == true)
         {
+            AudioManager.Instance.PlaySFX(8);
             if (transform.position != _targetPosition)
-            {
+            {                
                 foreach (TriggerZoneDialog trigger in _zoneDialog)
                 {
                     if (!trigger._isTrigger)
                     {
                         transform.position = Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _speed);
-                        Anim.SetBool("Iswalking", true);
-                        AudioManager.Instance.PlaySFX(8);
+                        Anim.SetBool("Iswalking", true);                        
                     }
                 }
             }
