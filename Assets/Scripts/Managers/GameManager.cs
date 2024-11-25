@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _nbOfObjToDrop;
     [HideInInspector] public int _nbOfObjDropped;
     [SerializeField] private bool _needObjToChangeScene;
+    [SerializeField] private bool _needDialogToChangeScene;
+    [SerializeField] private Dialog _dialog;
 
 
     private void Awake()
@@ -58,12 +60,32 @@ public class GameManager : MonoBehaviour
         {
             if (_nbOfObjDropped == _nbOfObjToDrop)
             {
-                Debug.Log("Changement de scène");
+                if(_needDialogToChangeScene)
+                {
+                    if(!_dialog.InProgress)
+                    {
+                        Debug.Log("Changement de scène");
+                    }
+                    else
+                    Debug.Log("Besoin de dialog fini");
+                }
+                else
+                {
+                    Debug.Log("Changement de scène");
+                }                
                 //fade + changement de scène
             }
         }
-        else
+        else if (_needDialogToChangeScene)
         {
+            if (!_dialog.InProgress)
+            {
+                Debug.Log("Changement de scène");
+            }
+            else
+                Debug.Log("Besoin de dialog fini");
+        }
+        else{
             Debug.Log("Pas besoin d'objet spécifique");
             // voir comment on change de scène
         }

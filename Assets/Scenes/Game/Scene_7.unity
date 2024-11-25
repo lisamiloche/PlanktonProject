@@ -1706,7 +1706,7 @@ Transform:
   m_GameObject: {fileID: 394038236}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.5, y: -4.09, z: 0.0643941}
+  m_LocalPosition: {x: -10.29, y: -4.09, z: 0.0643941}
   m_LocalScale: {x: 0.9346185, y: 2.6645007, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5122,6 +5122,8 @@ MonoBehaviour:
   _nbOfObjToDrop: 3
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
+  _needDialogToChangeScene: 1
+  _dialog: {fileID: 1810587509}
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
