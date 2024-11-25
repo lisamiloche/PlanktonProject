@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbb48c441dfe1548888216cb9c41529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _suitableObjectName: Character
+  _suitableObjectName: URIKA
   _canBeDrop: 0
