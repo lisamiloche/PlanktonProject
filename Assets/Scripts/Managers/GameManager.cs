@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
-        Fade.enabled = false;
+        StartCoroutine(FadingStart());
     }
 
     // Update is called once per frame
@@ -104,6 +104,12 @@ public class GameManager : MonoBehaviour
         Fade.DOFade(1f, 2f);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(_sceneSuivante);
+    }
+    IEnumerator FadingStart()
+    {
+        Fade.DOFade(0f, 2f);
+        yield return new WaitForSeconds(2f);
+        Fade.enabled = false;
     }
 
     public void Resume()
