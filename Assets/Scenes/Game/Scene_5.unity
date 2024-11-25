@@ -5141,8 +5141,8 @@ MonoBehaviour:
   _nbOfObjToDrop: 3
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
-  _needDialogToChangeScene: 0
-  _dialog: {fileID: 0}
+  _needDialogToChangeScene: 1
+  _dialog: {fileID: 794453813}
   _sceneSuivante: Scene_6
 --- !u!4 &1252596488
 Transform:
