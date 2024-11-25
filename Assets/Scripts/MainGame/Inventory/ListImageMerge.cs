@@ -13,6 +13,8 @@ public class ListImageMerge
         Vaisseau,
         Boulon,
         AffairesPerdues,
+        Compo01,
+        Compo02,
         Autres
     }
     public Types type;

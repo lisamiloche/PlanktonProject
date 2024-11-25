@@ -13,6 +13,8 @@ public class TypesManager : MonoBehaviour
         Vaisseau,
         Boulon,
         AffairesPerdues,
+        Compo01,
+        Compo02,
         Autres
     }
     public Types type;
