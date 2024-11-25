@@ -804,7 +804,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 260098414}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!114 &269807872
 MonoBehaviour:
@@ -1638,7 +1645,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 458377090}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1001 &476912114
 PrefabInstance:
@@ -1886,7 +1900,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 596311862}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &619454218
 GameObject:
@@ -2698,7 +2719,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 828403416}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &829078106
 GameObject:
@@ -4141,7 +4169,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1058425333}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1066360590
 GameObject:
@@ -4779,7 +4814,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1137111766}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1138063955
 GameObject:
@@ -5364,7 +5406,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1252402533}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1252596486
 GameObject:
@@ -5398,6 +5447,7 @@ MonoBehaviour:
   MGlass: {fileID: 1504653400}
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 1891758214}
+  MainCam: {fileID: 0}
   SettingsCanvas: {fileID: 0}
   Pause: {fileID: 0}
   Player: {fileID: 1965426397}
@@ -5405,6 +5455,9 @@ MonoBehaviour:
   - {fileID: 1097323294}
   - {fileID: 1520854689}
   - {fileID: 1501577561}
+  _nbOfObjToDrop: 0
+  _nbOfObjDropped: 0
+  _needObjToChangeScene: 0
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5638,7 +5691,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1309835900}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1330962025
 GameObject:
@@ -5960,7 +6020,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1353449802}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1466626555
 GameObject:
@@ -7310,7 +7377,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1644748042}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1670881284
 GameObject:
@@ -8059,7 +8133,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1809486745}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1809627172
 GameObject:
@@ -8444,7 +8525,14 @@ MonoBehaviour:
   _mergeObjects: {fileID: 1876248271}
   _panneau: {fileID: 5450514929980330492, guid: a680a8945eec4164bb398c29ab410318, type: 3}
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
+  _boutDeBois: []
+  _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
   _speed: 10
+  _imageName: 
+  _gameManager: {fileID: 0}
+  _image: {fileID: 0}
   _isDragging: 0
 --- !u!1 &1883432633
 GameObject:
@@ -9008,6 +9096,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 276486423763604585, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
   m_PrefabInstance: {fileID: 1325590949214942096}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1965426404
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965426397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d10eb9e7e9d23b244ab75144f2972ddf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2007086839
 GameObject:
   m_ObjectHideFlags: 0
@@ -9552,6 +9661,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2496955780516771500, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 1965426404}
+    - target: {fileID: 2496955780516771500, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
       propertyPath: _zoneDialog
       value: 
       objectReference: {fileID: 394038237}
@@ -9570,7 +9683,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2955885926037144248, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965426404}
   m_SourcePrefab: {fileID: 100100000, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
 --- !u!224 &1532769675436149807
 RectTransform:

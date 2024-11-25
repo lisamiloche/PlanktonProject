@@ -21,6 +21,7 @@ public class DragAndDrop : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private string _imageName;
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private Image _image;
 
     private GameObject _dragObject = null; 
     private Vector3 PositionMouse;
@@ -31,7 +32,6 @@ public class DragAndDrop : MonoBehaviour
     private bool _stopDrag = false;
     Vector3 _dragPosition;
     InteractiveObjects interactiveObjects;
-    [SerializeField] private Image _image;
 
     private void Update()
     {

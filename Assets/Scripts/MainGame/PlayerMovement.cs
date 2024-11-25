@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isMoving = false;
     [SerializeField] private Collider2D _floorCollider;
     [SerializeField] private TriggerZoneDialog[] _zoneDialog;
+    [SerializeField] private Animator _anim;
 
     private void Start()
     {
@@ -18,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && transform.position == _targetPosition)
+        if (Input.GetMouseButtonDown(0) && transform.position == _targetPosition)
         {
-            foreach(TriggerZoneDialog trigger in _zoneDialog)
+            foreach (TriggerZoneDialog trigger in _zoneDialog)
             {
-                if(!trigger._isTrigger)
+                if (!trigger._isTrigger)
                 {
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
                         bool Left = direction.x > 0;
                         if (Left)
                         {
-                            transform.localScale = new Vector3(-1,1,1);
+                            transform.localScale = new Vector3(-1, 1, 1);
                         }
                         else
                         {
@@ -47,18 +48,24 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(_isMoving == true)
+        if (_isMoving == true)
         {
             if (transform.position != _targetPosition)
             {
                 foreach (TriggerZoneDialog trigger in _zoneDialog)
                 {
                     if (!trigger._isTrigger)
+                    {
                         transform.position = Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _speed);
+                        _anim.SetBool("Iswalking", true);
+                    }
                 }
             }
             else if (transform.position == _targetPosition)
+            {
                 _isMoving = false;
+                _anim.SetBool("Iswalking", false);
+            }
         }
     }
 }
