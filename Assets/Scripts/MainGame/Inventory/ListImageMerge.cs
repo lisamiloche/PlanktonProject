@@ -12,6 +12,7 @@ public class ListImageMerge
         BoutDeBois,
         Vaisseau,
         Boulon,
+        AffairesPerdues,
         Autres
     }
     public Types type;

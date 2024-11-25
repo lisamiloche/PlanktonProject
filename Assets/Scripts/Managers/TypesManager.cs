@@ -12,6 +12,7 @@ public class TypesManager : MonoBehaviour
         BoutDeBois,
         Vaisseau,
         Boulon,
+        AffairesPerdues,
         Autres
     }
     public Types type;

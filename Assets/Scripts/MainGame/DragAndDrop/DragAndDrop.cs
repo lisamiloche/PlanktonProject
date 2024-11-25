@@ -17,6 +17,7 @@ public class DragAndDrop : MonoBehaviour
     [SerializeField] private GameObject[] _boutDeBois;
     [SerializeField] private GameObject[] _vaisseau;
     [SerializeField] private GameObject[] _boulon;
+    [SerializeField] private GameObject[] _affairesPerdues;    
     [SerializeField] private float _speed;
     [SerializeField] private string _imageName;
     [SerializeField] private GameManager _gameManager;
@@ -160,10 +161,27 @@ public class DragAndDrop : MonoBehaviour
                     Debug.Log("Sprite is null");
             }
         }
+        else if (_mergeObjects.type == TypesManager.Types.AffairesPerdues)
+        {
+            foreach (var item in _affairesPerdues)
+            {
+                SpriteRenderer spriteRenderer = item.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer.sprite != null)
+                {
+                    if (spriteRenderer.sprite.name == _imageName)
+                    {
+                        _dragObject = item;
+                    }
+                }
+                else
+                    Debug.Log("Sprite is null");
+            }
+        }
         else if (_mergeObjects.type == TypesManager.Types.Autres)
             _dragObject = _autre;
     }
-
+    
     private void StopDrag()
     {
         _instance.transform.position = Vector2.MoveTowards(_instance.transform.position, _dragPosition, _speed * Time.deltaTime);
