@@ -2408,7 +2408,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c1fbde57c0f4081438774f1ec4778c57, type: 3}
   - {fileID: 8300000, guid: a572c65d1fcb3044283f38e07f1202d5, type: 3}
   - {fileID: 8300000, guid: 98a912824bc1f2246b961027c331a326, type: 3}
-  - {fileID: 8300000, guid: 87bd1538368774c4cb45a2c950991ff3, type: 3}
 --- !u!4 &609529931
 Transform:
   m_ObjectHideFlags: 0
@@ -5258,6 +5257,7 @@ MonoBehaviour:
   Pause: {fileID: 0}
   Player: {fileID: 1965426397}
   Fade: {fileID: 602027068}
+  CanDialog: 0
   HidenObjects:
   - {fileID: 1784374221}
   _nbOfObjToDrop: 1
