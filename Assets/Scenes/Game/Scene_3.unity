@@ -806,11 +806,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 260098412}
+  _isDragging: 0
 --- !u!114 &269807872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,11 +1529,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 458377088}
+  _isDragging: 0
 --- !u!1001 &476912114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1778,11 +1786,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 596311860}
+  _isDragging: 0
 --- !u!1 &619454218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,11 +2566,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 828403419}
+  _isDragging: 0
 --- !u!1 &829078106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,11 +3869,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1058425331}
+  _isDragging: 0
 --- !u!1 &1066360590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,11 +4367,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1137111764}
+  _isDragging: 0
 --- !u!1 &1138063955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,11 +4859,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1252402531}
+  _isDragging: 0
 --- !u!1 &1252596486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,6 +4900,7 @@ MonoBehaviour:
   MGlass: {fileID: 1504653400}
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 1891758214}
+  MainCam: {fileID: 0}
   SettingsCanvas: {fileID: 0}
   Pause: {fileID: 0}
   Player: {fileID: 1965426397}
@@ -4882,6 +4911,8 @@ MonoBehaviour:
   _nbOfObjToDrop: 0
   _nbOfObjDropped: 0
   _needObjToChangeScene: 0
+  _needDialogToChangeScene: 1
+  _dialog: {fileID: 794453813}
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5118,11 +5149,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1309835898}
+  _isDragging: 0
 --- !u!1 &1353449796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,11 +5331,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1353449800}
+  _isDragging: 0
 --- !u!1 &1486167581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6203,11 +6242,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1644748040}
+  _isDragging: 0
 --- !u!1 &1670881284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6808,11 +6851,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1809486743}
+  _isDragging: 0
 --- !u!1 &1809627172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,11 +7246,15 @@ MonoBehaviour:
   _autre: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
   _boutDeBois: []
   _vaisseau: []
+  _boulon: []
+  _affairesPerdues: []
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 0}
-  _isDragging: 0
   _image: {fileID: 1876248269}
+  _isDragging: 0
 --- !u!1 &1889211085
 GameObject:
   m_ObjectHideFlags: 0

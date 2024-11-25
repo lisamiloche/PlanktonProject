@@ -906,11 +906,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 260098412}
+  _isDragging: 0
 --- !u!114 &269807872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,11 +1753,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 458377088}
+  _isDragging: 0
 --- !u!1001 &476912114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2104,11 +2108,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 596311860}
+  _isDragging: 0
 --- !u!1 &628935127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,11 +2720,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 828403419}
+  _isDragging: 0
 --- !u!1 &829078106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,11 +4027,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1058425331}
+  _isDragging: 0
 --- !u!1 &1066360590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,11 +4380,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1137111764}
+  _isDragging: 0
 --- !u!1 &1138063955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4678,7 +4690,7 @@ Transform:
   m_GameObject: {fileID: 1248298850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0803847, y: 2.871809, z: -0.06608093}
+  m_LocalPosition: {x: 0.26, y: 2.871809, z: -0.06608093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4864,11 +4876,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1252402531}
+  _isDragging: 0
 --- !u!1 &1252596486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +4915,7 @@ MonoBehaviour:
   MGlass: {fileID: 1504653400}
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 1891758214}
+  MainCam: {fileID: 0}
   SettingsCanvas: {fileID: 0}
   Pause: {fileID: 0}
   Player: {fileID: 1965426397}
@@ -4911,6 +4926,8 @@ MonoBehaviour:
   _nbOfObjToDrop: 4
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
+  _needDialogToChangeScene: 1
+  _dialog: {fileID: 1810587509}
 --- !u!4 &1252596488
 Transform:
   m_ObjectHideFlags: 0
@@ -5153,11 +5170,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1309835898}
+  _isDragging: 0
 --- !u!1 &1353449796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,11 +5356,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1353449800}
+  _isDragging: 0
 --- !u!1 &1486167581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,11 +6450,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1644748040}
+  _isDragging: 0
 --- !u!1 &1670881284
 GameObject:
   m_ObjectHideFlags: 0
@@ -7040,11 +7063,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1809486743}
+  _isDragging: 0
 --- !u!1 &1809627172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7437,11 +7462,13 @@ MonoBehaviour:
   - {fileID: 1610136192381157529, guid: d9580855674d3a449954d595569fa093, type: 3}
   - {fileID: 5115533881655542087, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
   - {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+  _compo01: []
+  _compo02: []
   _speed: 10
   _imageName: 
   _gameManager: {fileID: 1252596487}
-  _isDragging: 0
   _image: {fileID: 1876248269}
+  _isDragging: 0
 --- !u!1 &1889211085
 GameObject:
   m_ObjectHideFlags: 0
