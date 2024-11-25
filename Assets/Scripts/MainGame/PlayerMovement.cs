@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isMoving == true)
         {
-            AudioManager.Instance.PlaySFX(8);
             if (transform.position != _targetPosition)
             {                
                 foreach (TriggerZoneDialog trigger in _zoneDialog)
