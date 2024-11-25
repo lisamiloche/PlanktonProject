@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;
-    [SerializeField] private GameObject _audioManager;
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -48,21 +47,34 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         StartCoroutine(FadingStart());
+        ChooseGoodSound();
+    }
 
-        index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("index : " + index);
-
+    private void ChooseGoodSound()
+    {
         if (index == 2 || index == 3 || index == 5 || index == 6)
-            _audioManager.GetComponent<AudioManager>().PlayMusic(1, true);
+        {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlayMusic(1, true);
+        }
         else if (index == 4 || index == 9 || index == 10)
-            _audioManager.GetComponent<AudioManager>().PlayMusic(2, true);
+        {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlayMusic(2, true);
+        }
         else if (index == 7 || index == 8)
-            _audioManager.GetComponent<AudioManager>().PlayMusic(3, true);
+        {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlayMusic(3, true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("index : " + index);
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             if (MGlass.activeSelf) { MGlass.SetActive(false); _grain.SetActive(false); }
