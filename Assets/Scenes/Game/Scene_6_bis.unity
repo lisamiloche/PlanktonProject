@@ -2263,11 +2263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415958283613688546, guid: d9580855674d3a449954d595569fa093, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.67
+      value: -4.34
       objectReference: {fileID: 0}
     - target: {fileID: 4415958283613688546, guid: d9580855674d3a449954d595569fa093, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.61
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 4415958283613688546, guid: d9580855674d3a449954d595569fa093, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -15.56, y: 0.49}
   _maxBounds: {x: 16.08, y: 0.49}
   _dialogManagers:
@@ -4639,7 +4639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -15.56, y: 0}
   _maxBounds: {x: 16.08, y: 0}
   _dialogManagers:

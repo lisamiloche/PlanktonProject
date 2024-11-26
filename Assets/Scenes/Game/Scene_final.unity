@@ -2332,7 +2332,7 @@ MonoBehaviour:
     m_Bits: 1
   _material: {fileID: 2100000, guid: 98e9924673d866a4a97ffae5c200d5ff, type: 2}
   _blur: {fileID: 977197155}
-  _speed: 5
+  _speed: 8
   _isInDialog: 0
   _cameraManager:
   - {fileID: 1138063961}
@@ -2821,7 +2821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -16.32, y: 0}
   _maxBounds: {x: 16.16, y: 0}
   _dialogManagers:
@@ -4397,7 +4397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -16.32, y: 0}
   _maxBounds: {x: 16.16, y: 0}
   _dialogManagers:

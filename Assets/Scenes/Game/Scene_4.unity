@@ -3070,7 +3070,7 @@ MonoBehaviour:
     m_Bits: 1
   _material: {fileID: 2100000, guid: 98e9924673d866a4a97ffae5c200d5ff, type: 2}
   _blur: {fileID: 977197155}
-  _speed: 5
+  _speed: 8
   _isInDialog: 0
   _cameraManager:
   - {fileID: 1138063961}
