@@ -3123,6 +3123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
+  _boxDialog: {fileID: 0}
   _minBounds: {x: -23.36, y: 0}
   _maxBounds: {x: 23.93, y: 0}
   _dialogManagers:
@@ -4346,7 +4347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextDialog: "Ah oui, des personnes ont vu mon vaisseau quand je me suis \xE9cras\xE9."
   TextNameCharacter: XIGURG
-  TextButton: END
+  TextButton: Suivant
 --- !u!1 &1137111760
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,6 +4687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
+  _boxDialog: {fileID: 0}
   _minBounds: {x: -23.36, y: 0}
   _maxBounds: {x: 23.93, y: 0}
   _dialogManagers:

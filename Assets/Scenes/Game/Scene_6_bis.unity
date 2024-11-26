@@ -3133,6 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
+  _boxDialog: {fileID: 0}
   _minBounds: {x: -15.56, y: 0.49}
   _maxBounds: {x: 16.08, y: 0.49}
   _dialogManagers:
@@ -4751,6 +4752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
+  _boxDialog: {fileID: 0}
   _minBounds: {x: -15.56, y: 0}
   _maxBounds: {x: 16.08, y: 0}
   _dialogManagers:
@@ -5140,7 +5142,7 @@ MonoBehaviour:
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
   _needDialogToChangeScene: 1
-  _dialog: {fileID: 1810587509}
+  _dialog: {fileID: 794453813}
   _sceneSuivante: Scene_7
 --- !u!4 &1252596488
 Transform:

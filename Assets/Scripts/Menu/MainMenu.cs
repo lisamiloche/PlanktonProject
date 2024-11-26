@@ -77,6 +77,7 @@ public class MainMenu : MonoBehaviour
         Fade.enabled = true;
         Fade.DOFade(1, 2);
         yield return new WaitForSeconds(2);
+        Application.Quit();
     }
 
 }
