@@ -5438,14 +5438,11 @@ MonoBehaviour:
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 654737554}
   MainCam: {fileID: 1138063957}
-  Pause: {fileID: 0}
+  Pause: {fileID: 8788847548718955145, guid: b6844ab687e5e8249aef41eb0a6b0362, type: 3}
   Player: {fileID: 1965426397}
   Fade: {fileID: 2032993461}
   CanDialog: 0
-  HidenObjects:
-  - {fileID: 497624320}
-  - {fileID: 658969571}
-  - {fileID: 1549730434}
+  HidenObjects: []
   _nbOfObjToDrop: 0
   _nbOfObjDropped: 0
   _needObjToChangeScene: 0
