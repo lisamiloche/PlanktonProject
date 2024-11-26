@@ -229,7 +229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1821770471291482473, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1821770471291482473, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
       propertyPath: m_MaskInteraction
@@ -238,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
       propertyPath: m_Name
       value: Collier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3059678326857186746, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4463586137984527369, guid: 6fd0ea94bc2f1364bbf42c4869cbf1ea, type: 3}
       propertyPath: m_LocalScale.x
@@ -5177,6 +5181,10 @@ PrefabInstance:
     - target: {fileID: 6387815390524612114, guid: 21418ba2b4967674a9019595b3817c20, type: 3}
       propertyPath: m_Name
       value: Merge_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387815390524612114, guid: 21418ba2b4967674a9019595b3817c20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6796828199477198578, guid: 21418ba2b4967674a9019595b3817c20, type: 3}
       propertyPath: m_Pivot.x
