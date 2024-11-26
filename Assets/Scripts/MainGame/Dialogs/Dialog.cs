@@ -16,9 +16,8 @@ public class Dialog : MonoBehaviour
     [Header("Autres variables")]
     private int _sequenceNumber = 0;
     public bool InProgress = true;
-    //public bool _boxIsActive = false;
+    private bool _isTextAppear = false;
 
-    // Faire en sorte que le texte s'écrive au fur et à mesure aussi pour le premier dialogue.
 
     private void Start()
     {
@@ -36,21 +35,33 @@ public class Dialog : MonoBehaviour
         for (int i = 0; i < dialog.TextDialog.Length; i++)
         {
             TextDialog.text += dialog.TextDialog[i];
+            if (i == dialog.TextDialog.Length -1)
+                _isTextAppear = true;
+            else
+                _isTextAppear = false;
             yield return new WaitForSeconds(0.05f);
         }
     }
 
+    private void Update()
+    {
+        Debug.Log(_isTextAppear);
+    }
+
     public void OnClickNextDialog()
     {
-        _sequenceNumber++;
-        AudioManager.Instance.PlaySFX(2);
-        if (_sequenceNumber <= Dialogs.Length-1)
+        if(_isTextAppear)
         {
-            StartCoroutine(UpdateDialog(Dialogs[_sequenceNumber]));
-        }
-        else
-        {
-            InProgress = false;
+            _sequenceNumber++;
+            AudioManager.Instance.PlaySFX(2);
+            if (_sequenceNumber <= Dialogs.Length - 1)
+            {
+                StartCoroutine(UpdateDialog(Dialogs[_sequenceNumber]));
+            }
+            else
+            {
+                InProgress = false;
+            }
         }
     }
 }
