@@ -5350,7 +5350,6 @@ MonoBehaviour:
   MaskingGlass: {fileID: 244819991}
   _grain: {fileID: 490646529}
   MainCam: {fileID: 1138063957}
-  SettingsCanvas: {fileID: 0}
   Pause: {fileID: 1390635606}
   Player: {fileID: 1965426397}
   Fade: {fileID: 890951608}
@@ -7973,15 +7972,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3118157830214609726, guid: b6844ab687e5e8249aef41eb0a6b0362, type: 3}
       propertyPath: m_LocalScale.x
-      value: 120.00001
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 3118157830214609726, guid: b6844ab687e5e8249aef41eb0a6b0362, type: 3}
       propertyPath: m_LocalScale.y
-      value: 120.00001
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 3118157830214609726, guid: b6844ab687e5e8249aef41eb0a6b0362, type: 3}
       propertyPath: m_LocalScale.z
-      value: 120.00001
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 3118157830214609726, guid: b6844ab687e5e8249aef41eb0a6b0362, type: 3}
       propertyPath: m_LocalPosition.x
