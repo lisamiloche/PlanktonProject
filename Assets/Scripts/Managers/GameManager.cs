@@ -9,17 +9,17 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    
+
     public GameObject MGlass;
     public SpriteMask MaskingGlass;
-    [SerializeField] private GameObject _grain;    
+    [SerializeField] private GameObject _grain;
     public Camera MainCam;
     private int index;
     public GameObject SettingsCanvas;
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;
-    public bool CanDialog;
+    public bool CanDialog;  
 
     public List<InteractiveObjects> HidenObjects;
 
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Pause.SetActive(false);
         Time.timeScale = 1f;
         StartCoroutine(FadingStart());
         index = SceneManager.GetActiveScene().buildIndex;
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
         Debug.Log("index : " + index);
 
         if (Input.GetKeyDown(KeyCode.V))
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Pause.transform.position = new Vector3(MainCam.transform.position.x, 0, 0);
             Time.timeScale = 0f;
             Pause.SetActive(true);
         }
@@ -111,23 +113,23 @@ public class GameManager : MonoBehaviour
             CanDialog = true;
             if (_nbOfObjDropped == _nbOfObjToDrop)
             {
-                if(_needDialogToChangeScene)
+                if (_needDialogToChangeScene)
                 {
-                    if(!_dialog.InProgress)
+                    if (!_dialog.InProgress)
                     {
-                        if(index == 4)
+                        if (index == 4)
                             AudioManager.Instance.PlaySFX(1);
                         StartCoroutine(FadingBetweenScene());
                     }
                     else
-                    Debug.Log("Besoin de dialog fini");
+                        Debug.Log("Besoin de dialog fini");
                 }
                 else
                 {
                     if (index == 4)
                         AudioManager.Instance.PlaySFX(1);
                     StartCoroutine(FadingBetweenScene());
-                }                
+                }
                 //Ajouter un fade
             }
         }
@@ -143,10 +145,11 @@ public class GameManager : MonoBehaviour
             else
                 Debug.Log("Besoin de dialog fini");
         }
-        else{
+        else
+        {
             Debug.Log("Management de la scène anormal");
         }
-        
+
     }
     IEnumerator FadingBetweenScene()
     {
@@ -161,27 +164,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Fade.enabled = false;
     }
-
-    public void Resume()
-    {
-        Time.timeScale = 1f;
-        Pause.SetActive(false);
-    }
-
-    public void Settings()
-    {
-        SettingsCanvas.SetActive(true);
-    }
-
-    public void Back()
-    {
-        SettingsCanvas.SetActive(false);
-    }
-
-    public void Quit()
-    {
-        SceneManager.LoadScene(0);
-    }
+   
 
 
 }

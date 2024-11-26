@@ -135,10 +135,10 @@ public class DialogManager : MonoBehaviour
             }
         }
 
-        _transitionSpot01 = new Vector3(_camera.position.x - 12, _camera.position.y, 0);
-        _transitionSpot02 = new Vector3(_camera.position.x + 12, _camera.position.y, 0);
-        _finalSpot01 = new Vector3((_camera.position.x - 3), _camera.position.y, 0);
-        _finalSpot02 = new Vector3((_camera.position.x + 3), _camera.position.y, 0);
+        _transitionSpot01 = new Vector3(_camera.position.x - 12, _camera.position.y - 3.5f, 0);
+        _transitionSpot02 = new Vector3(_camera.position.x + 12, _camera.position.y - 3.5f, 0);
+        _finalSpot01 = new Vector3(_camera.position.x - 6, _camera.position.y - 3.5f, 0);
+        _finalSpot02 = new Vector3(_camera.position.x + 6, _camera.position.y - 3.5f, 0);
     }
 
     private void Placement(Vector3 spot01, Vector3 spot02, bool _isLeft)
@@ -148,13 +148,13 @@ public class DialogManager : MonoBehaviour
 
         if (_player.position.x < _characterTrsfm.position.x)
         {
-            _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la droite
-            _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la gauche
+            _player.localScale = new Vector3(-Mathf.Abs(_player.localScale.x)*4, _player.localScale.y*4, _player.localScale.z*4); // Regarder vers la droite
+            _characterTrsfm.localScale = new Vector3(Mathf.Abs(_characterTrsfm.localScale.x)*4, _characterTrsfm.localScale.y*4, _characterTrsfm.localScale.z*4); // Regarder vers la gauche
         }
         else
         {
-            _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x), _player.localScale.y, _player.localScale.z); // Regarder vers la gauche
-            _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x), _characterTrsfm.localScale.y, _characterTrsfm.localScale.z); // Regarder vers la droite
+            _player.localScale = new Vector3(Mathf.Abs(_player.localScale.x)*4, _player.localScale.y*4, _player.localScale.z*4); // Regarder vers la gauche
+            _characterTrsfm.localScale = new Vector3(-Mathf.Abs(_characterTrsfm.localScale.x)*4, _characterTrsfm.localScale.y*4, _characterTrsfm.localScale.z*4); // Regarder vers la droite
         }
 
         _isPlayerLeft = _isLeft;
@@ -211,16 +211,16 @@ public class DialogManager : MonoBehaviour
             if (_dialog.TextNameCharacter.text == _player.name)
             {
                 if (_isPlayerLeft)
-                    _dialogBox.transform.position = new Vector2(_player.position.x + 2, _player.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_player.position.x + 4f, _player.position.y + 4f);
                 else
-                    _dialogBox.transform.position = new Vector2(_player.position.x - 2, _player.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_player.position.x - 4f, _player.position.y + 4f);
             }
             else if (_dialog.TextNameCharacter.text == _character.name)
             {
                 if (_isPlayerLeft)
-                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x - 2, _characterTrsfm.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x - 4f, _characterTrsfm.position.y + 4f);
                 else
-                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x + 2, _characterTrsfm.position.y + 0.5f);
+                    _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x + 4f, _characterTrsfm.position.y + 4f);
             }
         }
 

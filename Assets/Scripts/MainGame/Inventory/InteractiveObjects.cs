@@ -54,7 +54,7 @@ public class InteractiveObjects : TypesManager
                 if (Inventory.Instance.ItemInInventory < Inventory.Instance.InventoryBoxs.Count)
                 {
                     transform.position = new Vector3 (GameManager.Instance.MainCam.transform.position.x,0,0);
-                    transform.localScale = new Vector2(0.5f, 0.5f);
+                    transform.localScale = new Vector2(2f, 2f);
                     StartCoroutine(WaitToGoInventory());
                 }
                 else
