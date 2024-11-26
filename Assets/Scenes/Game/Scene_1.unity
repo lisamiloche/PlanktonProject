@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 7
-  Image: {fileID: 21300000, guid: a874df20e9b06ce468164c4f0585b5f7, type: 3}
+  Image: {fileID: 21300000, guid: 6abd41619d634fb4ea7628bc4dd8a342, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2
@@ -1402,7 +1402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -481, y: 6.045}
+  m_AnchoredPosition: {x: -331, y: 6.045}
   m_SizeDelta: {x: 756.44, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393802602
@@ -2771,7 +2771,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &646993338
 Transform:
@@ -4126,7 +4126,7 @@ MonoBehaviour:
   ItemToMerge: []
   MergeSprites:
   - type: 7
-    Sprite: {fileID: 21300000, guid: b1705cd34e861784e99629d5e2a05512, type: 3}
+    Sprite: {fileID: 21300000, guid: a874df20e9b06ce468164c4f0585b5f7, type: 3}
   NumberToMerge: 0
   ItemInInventory: 0
   MergeButton: {fileID: 846099890}
@@ -6498,7 +6498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1021, y: -64}
+  m_AnchoredPosition: {x: -1442, y: 146.96}
   m_SizeDelta: {x: 756.44, y: 52.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588167347
@@ -6530,8 +6530,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289317342
-  m_fontColor: {r: 0.8705883, g: 0.78823537, b: 0.6627451, a: 1}
+    rgba: 4281023055
+  m_fontColor: {r: 0.30980393, g: 0.227451, b: 0.16862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

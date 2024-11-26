@@ -1737,6 +1737,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1741284740004043243, guid: c9a762278c6830a40a3b18347ea1dce2, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5822468911644393986, guid: c9a762278c6830a40a3b18347ea1dce2, type: 3}
       propertyPath: m_Name
       value: Bague
@@ -2288,6 +2292,14 @@ PrefabInstance:
     - target: {fileID: 5864428789949633940, guid: d9580855674d3a449954d595569fa093, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864428789949633940, guid: d9580855674d3a449954d595569fa093, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864428789949633940, guid: d9580855674d3a449954d595569fa093, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 542162285989984720, guid: d9580855674d3a449954d595569fa093, type: 3}
@@ -6446,6 +6458,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6420013970349694253, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420013970349694253, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6646654660869128333, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
     - {fileID: 7221442768980415854, guid: cdbb94b80dc34e042a53de72f590bcdd, type: 3}
@@ -6551,7 +6571,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!4 &1552745253
 Transform:
