@@ -1948,7 +1948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345243905409671967, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7370499087437635263, guid: 98f1c32a7c7f31c4fa879fc3e432cd93, type: 3}
       propertyPath: m_Name
@@ -4126,7 +4126,7 @@ MonoBehaviour:
   ItemToMerge: []
   MergeSprites:
   - type: 7
-    Sprite: {fileID: 21300000, guid: a874df20e9b06ce468164c4f0585b5f7, type: 3}
+    Sprite: {fileID: 21300000, guid: 7ab9f8859b114dd4c9c647779877f719, type: 3}
   NumberToMerge: 0
   ItemInInventory: 0
   MergeButton: {fileID: 846099890}
@@ -5461,8 +5461,7 @@ MonoBehaviour:
   Player: {fileID: 1965426397}
   Fade: {fileID: 602027068}
   CanDialog: 0
-  HidenObjects:
-  - {fileID: 1784374221}
+  HidenObjects: []
   _nbOfObjToDrop: 1
   _nbOfObjDropped: 0
   _needObjToChangeScene: 1
