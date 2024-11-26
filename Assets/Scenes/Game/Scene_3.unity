@@ -6641,7 +6641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "J'ai donc appris les trois langues les plus parl\xE9es, et l'anglais
+  TextDialog: "J'ai donc appris les trois langues les plus parl\xE9es, et le fran\xE7ais
     en faisait partie. "
   TextNameCharacter: XIGURG
   TextButton: Suivant
