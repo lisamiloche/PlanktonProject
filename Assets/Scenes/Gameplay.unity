@@ -9096,27 +9096,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 276486423763604585, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
   m_PrefabInstance: {fileID: 1325590949214942096}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1965426404
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965426397}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d10eb9e7e9d23b244ab75144f2972ddf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2007086839
 GameObject:
   m_ObjectHideFlags: 0
@@ -9644,30 +9623,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 285520155477724501, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a9854e5576b25b249b30c7b7eb44b9e0, type: 3}
-    - target: {fileID: 285520155477724501, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 285520155477724501, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 285520155477724501, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2496955780516771500, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: _anim
-      value: 
-      objectReference: {fileID: 1965426404}
-    - target: {fileID: 2496955780516771500, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      propertyPath: _zoneDialog
-      value: 
-      objectReference: {fileID: 394038237}
     - target: {fileID: 2496955780516771500, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
       propertyPath: _floorCollider
       value: 
@@ -9683,10 +9638,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2955885926037144248, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1965426404}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caeb104d9cef2394cb74dba3d1f5d112, type: 3}
 --- !u!224 &1532769675436149807
 RectTransform:
