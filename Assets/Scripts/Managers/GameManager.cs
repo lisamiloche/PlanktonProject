@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public SpriteMask MaskingGlass;
     [SerializeField] private GameObject _grain;
     public Camera MainCam;
-    private int index;
+    [HideInInspector]public int index;
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;

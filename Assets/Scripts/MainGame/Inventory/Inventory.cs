@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (NumberToMerge >= 2)
+        if (NumberToMerge >= 2 && GameManager.Instance.index != 5 && GameManager.Instance.index != 6 && GameManager.Instance.index != 8 )
         {
             MergeButton.gameObject.SetActive(true);
             MergeButton.gameObject.transform.position = new Vector3(GameManager.Instance.MainCam.transform.position.x, 0, 0);
