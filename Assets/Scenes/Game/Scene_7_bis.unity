@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  Image: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  Image: {fileID: 21300000, guid: b4bcb391edb277e48ae1e505cf91fe5a, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 8
-  Image: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  Image: {fileID: 21300000, guid: e88142be368631d4bb19e45660042d71, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2
@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  Image: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  Image: {fileID: 21300000, guid: bd110445216bb7f4fb0d68438314fa8f, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2
@@ -5244,8 +5244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31cfad5a96397d4b92c73c647d3b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDialog: "Il faut que je trouve une recette aussi. J'en ai vu une la premi\xE8re
-    fois que je suis venu ici.  "
+  TextDialog: Je vais devoir aussi faire deux combinaisons de deux aliments.
   TextNameCharacter: XIGURG
   TextButton: Fin
 --- !u!1 &1204865365
@@ -8268,7 +8267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  Image: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  Image: {fileID: 21300000, guid: 7cfcc7e03e4aa534ea10409f5b23d4a5, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2
@@ -8631,7 +8630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  Image: {fileID: 21300000, guid: 0f6110fdede4b3942b7dcf047791430e, type: 3}
+  Image: {fileID: 21300000, guid: 774826a3eef46d4409fde6e7a47709b8, type: 3}
   OrderRenderer: {fileID: 0}
   _layerMask:
     serializedVersion: 2

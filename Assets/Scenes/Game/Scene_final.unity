@@ -9023,17 +9023,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 567121702832719081, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
+      propertyPath: m_Radius
+      value: 4.0930686
+      objectReference: {fileID: 0}
+    - target: {fileID: 567121702832719081, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.014089857
+      objectReference: {fileID: 0}
+    - target: {fileID: 567121702832719081, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08454289
+      objectReference: {fileID: 0}
     - target: {fileID: 4617583305201111691, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
       propertyPath: m_Name
       value: URIKA
       objectReference: {fileID: 0}
     - target: {fileID: 7637566976673963177, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7637566976673963177, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 7637566976673963177, guid: 1e561e3727c7f884399cbdd6beb43fb5, type: 3}
       propertyPath: m_LocalPosition.z
