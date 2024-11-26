@@ -7,16 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public Image Fade;
     public GameObject Pause;
-
-    IEnumerator FadingQuit()
-    {
-        Fade.enabled = true;
-        Fade.DOFade(1f, 2f);
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("MainMenu");
-    }
 
     public void Resume()
     {
@@ -26,6 +17,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        StartCoroutine(FadingQuit());
+        SceneManager.LoadScene("MainMenu"); 
     }
 }

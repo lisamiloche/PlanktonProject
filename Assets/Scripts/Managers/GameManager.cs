@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _grain;
     public Camera MainCam;
     private int index;
-    public GameObject SettingsCanvas;
     public GameObject Pause;
     public GameObject Player;
     public Image Fade;
@@ -82,7 +81,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Fade.enabled == false)
         {
             Pause.transform.position = new Vector3(MainCam.transform.position.x, 0, 0);
             Time.timeScale = 0f;
