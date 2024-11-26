@@ -3069,7 +3069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -16.32, y: 0}
   _maxBounds: {x: 16.16, y: 0}
   _dialogManagers:
@@ -4788,7 +4788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1965426399}
   _inventory: {fileID: 1017614385}
-  _boxDialog: {fileID: 0}
+  _boxDialog: {fileID: 1809627173}
   _minBounds: {x: -16.32, y: 0}
   _maxBounds: {x: 16.16, y: 0}
   _dialogManagers:

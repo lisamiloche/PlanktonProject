@@ -217,9 +217,15 @@ public class DialogManager : MonoBehaviour
             else if (_dialog.TextNameCharacter.text == _character.name)
             {
                 if (_isPlayerLeft)
+                {
                     _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x - 4f, _characterTrsfm.position.y + 4f);
+                    Debug.Log($"the player is left {_isPlayerLeft}");
+                }
                 else
+                {
                     _dialogBox.transform.position = new Vector2(_characterTrsfm.position.x + 4f, _characterTrsfm.position.y + 4f);
+                    Debug.Log($"the player is left {_isPlayerLeft}");
+                }
             }
         }
 
